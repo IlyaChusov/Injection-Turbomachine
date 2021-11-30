@@ -1,0 +1,22 @@
+﻿[*.cs]
+
+# CA1305: Укажите IFormatProvider
+dotnet_diagnostic.CA1305.severity = none
+
+# IDE0058: Значение выражения никогда не используется
+csharp_style_unused_value_expression_statement_preference = unused_local_variable:none
+
+# CA1303: Не передавать литералы в качестве локализованных параметров
+dotnet_diagnostic.CA1303.severity = none
+
+# CA2100: Проверка запросов SQL на уязвимости безопасности
+dotnet_diagnostic.CA2100.severity = none
+
+# CA1814: Используйте массивы массивов вместо многомерных массивов
+dotnet_diagnostic.CA1814.severity = none
+
+# CA2000: Ликвидировать объекты перед потерей области
+dotnet_diagnostic.CA2000.severity = none
+
+# CA1707: Удалите символы подчеркивания из имени пространства имен "Расчёт_нагнетательной_турбомашины".
+dotnet_diagnostic.CA1707.severity = none
