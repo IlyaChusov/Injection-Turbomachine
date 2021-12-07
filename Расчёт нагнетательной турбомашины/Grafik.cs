@@ -20,12 +20,15 @@ namespace Расчёт_нагнетательной_турбомашины
         private readonly List<double> ListOfnu = new List<double>();
         private readonly List<double> ListOfHc = new List<double>();
         private readonly List<double> ListOfH3pod = new List<double>();
+        private readonly List<double> ListOfHc_ = new List<double>();
         private readonly double[] H_Hc_crossPoint;
         private readonly double[] H_Hc_nu_point;
-        private readonly double[] H_H3pod_crossPoint;
-        private readonly double[] H_H3pod_nu_point;
         private readonly double[] H31;
         private readonly double[] H32;
+        private readonly double[] H_H3pod_crossPoint;
+        private readonly double[] H_H3pod_nu_point;
+        private readonly double[] H_Hc__crossPoint;
+        private readonly double[] H_Hc__nu_point;
 
         public Grafik(
             int _mode, 
@@ -34,13 +37,16 @@ namespace Расчёт_нагнетательной_турбомашины
             List<double> _ListOfH, 
             List<double> _ListOfnu, 
             List<double> _ListOfHc, 
-            List<double> _ListOfH3pod, 
+            List<double> _ListOfH3pod,
+            List<double> _ListOfHc_,
             double[] _H_Hc_crossPoint, 
             double[] _H_Hc_nu_point,
+            double[] _H31,
+            double[] _H32,
             double[] _H_H3pod_crossPoint,
             double[] _H_H3pod_nu_point,
-            double[] _H31, 
-            double[] _H32)
+            double[] _H_Hc__crossPoint,
+            double[] _H_Hc__nu_point)
         {
             InitializeComponent();
             mode = _mode;
@@ -50,12 +56,15 @@ namespace Расчёт_нагнетательной_турбомашины
             ListOfnu = _ListOfnu;
             ListOfHc = _ListOfHc;
             ListOfH3pod = _ListOfH3pod;
+            ListOfHc_ = _ListOfHc_;
             H_Hc_crossPoint = _H_Hc_crossPoint;
             H_Hc_nu_point = _H_Hc_nu_point;
-            H_H3pod_crossPoint = _H_H3pod_crossPoint;
-            H_H3pod_nu_point = _H_H3pod_nu_point;
             H31 = _H31;
             H32 = _H32;
+            H_H3pod_crossPoint = _H_H3pod_crossPoint;
+            H_H3pod_nu_point = _H_H3pod_nu_point;
+            H_Hc__crossPoint = _H_Hc__crossPoint;
+            H_Hc__nu_point = _H_Hc__nu_point;
             Draw();
         }
 
@@ -71,15 +80,12 @@ namespace Расчёт_нагнетательной_турбомашины
             PointPairList nPairList = new PointPairList();
             PointPairList HcPairList = new PointPairList();
             PointPairList H3podPairList = new PointPairList();
-            PointPairList H_Hc_crossPointPairList = new PointPairList();
-            PointPairList H_Hc_nu_pointPairList = new PointPairList();
-            PointPairList H_H3pod_crossPointPairList = new PointPairList();
-            PointPairList H_H3pod_nu_pointPairList = new PointPairList();
+            PointPairList Hc__PairList = new PointPairList();
+
             PointPairList H_Hc_linePairList = new PointPairList();
-            PointPairList H31PairList = new PointPairList();
-            PointPairList H32PairList = new PointPairList();
-            PointPairList H_linePairList = new PointPairList();
-            PointPairList H3_linePairList = new PointPairList();
+            PointPairList Hc_0_linePairList = new PointPairList();
+            PointPairList H_H3pod_nu_linePairList = new PointPairList();
+            PointPairList H_Hc__nu_linePairList = new PointPairList();
 
             for (int i = 0; i < ListOfQ.Count; i++)
             {
@@ -90,19 +96,18 @@ namespace Расчёт_нагнетательной_турбомашины
             {
                 HcPairList.Add(ListOfQ_long[i], ListOfHc[i]);
                 H3podPairList.Add(ListOfQ_long[i], ListOfH3pod[i]);
+                Hc__PairList.Add(ListOfQ_long[i], ListOfHc_[i]);
             }
-            H_Hc_crossPointPairList.Add(H_Hc_crossPoint[0], H_Hc_crossPoint[1]);
-            H_Hc_nu_pointPairList.Add(H_Hc_nu_point[0], H_Hc_nu_point[1]);
             H_Hc_linePairList.Add(H_Hc_crossPoint[0], H_Hc_crossPoint[1]);
             H_Hc_linePairList.Add(H_Hc_nu_point[0], H_Hc_nu_point[1]);
-            H_H3pod_crossPointPairList.Add(H_H3pod_crossPoint[0], H_H3pod_crossPoint[1]);
-            H_H3pod_nu_pointPairList.Add(H_H3pod_nu_point[0], H_H3pod_nu_point[1]);
-            H3_linePairList.Add(H_H3pod_crossPoint[0], H_H3pod_crossPoint[1]);
-            H3_linePairList.Add(H_H3pod_nu_point[0], H_H3pod_nu_point[1]);
-            H31PairList.Add(H31[0], H31[1]);
-            H32PairList.Add(H32[0], H32[1]);
-            H_linePairList.Add(H31[0], H31[1]);
-            H_linePairList.Add(H32[0], H32[1]);
+
+            Hc_0_linePairList.Add(H31[0], H31[1]);
+            Hc_0_linePairList.Add(H32[0], H32[1]);
+            H_H3pod_nu_linePairList.Add(H_H3pod_crossPoint[0], H_H3pod_crossPoint[1]);
+            H_H3pod_nu_linePairList.Add(H_H3pod_nu_point[0], H_H3pod_nu_point[1]);
+            
+            H_Hc__nu_linePairList.Add(H_Hc__crossPoint[0], H_Hc__crossPoint[1]);
+            H_Hc__nu_linePairList.Add(H_Hc__nu_point[0], H_Hc__nu_point[1]);
 
             MyPane.AddCurve("H", HPairList, Color.Blue, SymbolType.Plus);
             MyPane.AddCurve("nu", nPairList, Color.Red, SymbolType.Triangle);
@@ -111,18 +116,16 @@ namespace Расчёт_нагнетательной_турбомашины
             switch (mode)
             {
                 case 1:
-                    MyPane.AddCurve("", H_Hc_crossPointPairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H_Hc_nu_pointPairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H_Hc_linePairList, Color.RosyBrown, SymbolType.None);
+                    MyPane.AddCurve("", H_Hc_linePairList, Color.Black, SymbolType.Circle);
                     break;
                 case 3:
                     MyPane.AddCurve("H3 под", H3podPairList, Color.RosyBrown, SymbolType.Diamond);
-                    MyPane.AddCurve("", H31PairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H32PairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H_linePairList, Color.Black, SymbolType.None);
-                    MyPane.AddCurve("", H_H3pod_crossPointPairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H_H3pod_nu_pointPairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H3_linePairList, Color.Black, SymbolType.None);
+                    MyPane.AddCurve("", Hc_0_linePairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("", H_H3pod_nu_linePairList, Color.Black, SymbolType.Circle);
+                    break;
+                case 4:
+                    MyPane.AddCurve("H'c", Hc__PairList, Color.RosyBrown, SymbolType.Diamond);
+                    MyPane.AddCurve("", H_Hc__nu_linePairList, Color.Black, SymbolType.Circle);
                     break;
             }
 

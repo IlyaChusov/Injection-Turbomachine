@@ -29,17 +29,24 @@ namespace Расчёт_нагнетательной_турбомашины
         private readonly SQLiteCommand dbCommand = new SQLiteCommand();
         private const double g = 9.81;
         private const double pi = Math.PI;
-        private double H_c1;
-        private double H_c2;
-        List<int> ListOfQ = new List<int> { 0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 };
-        List<int> ListOfQ_long = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
+
+        List<int> ListOfQ = new List<int> 
+        { 0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 };
+        
+        List<int> ListOfQ_long = new List<int> 
+        { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
             29, 30, 31, 32, 33, 34, 35 };
-        List<double> ListOfH = new List<double> { 55, 54.5, 53, 52.6, 52.05, 51.45, 50.7, 50, 49.2, 48.4, 47.4, 46.3, 45, 43.45, 41.65, 39.65, 37.5,
+        
+        List<double> ListOfH = new List<double> 
+        { 55, 54.5, 53, 52.6, 52.05, 51.45, 50.7, 50, 49.2, 48.4, 47.4, 46.3, 45, 43.45, 41.65, 39.65, 37.5,
                 35, 32.2, 29.15, 25.9, 22.4, 19, 15.35, 11.6, 7.65, 3.95, 0 };
-        List<double> ListOfnu = new List<double> { 0, 20, 35, 37.6, 40.25, 42.75, 45, 47, 48.75, 50.25, 51.65, 52.9, 54.1, 55.15, 55.9, 56.2, 55.6, 54,
+        
+        List<double> ListOfnu = new List<double> 
+        { 0, 20, 35, 37.6, 40.25, 42.75, 45, 47, 48.75, 50.25, 51.65, 52.9, 54.1, 55.15, 55.9, 56.2, 55.6, 54,
                 51, 47, 42.25, 36.8, 31, 24.8, 18.85, 12.5, 6.35, 0 };
-        List<double> ListOfHc, ListOfH3pod;
-        double[] H_Hc_crossPoint, H_Hc_nu_point, H_H3pod_crossPoint, H_H3pod_nu_point;
+        
+        List<double> ListOfHc, ListOfH3pod, ListOfHc_;
+        double[] H_Hc_crossPoint, H_Hc_nu_point, H_H3pod_crossPoint, H_H3pod_nu_point, H_Hc__crossPoint, H_Hc__nu_point;
         double[] H31, H32;
 
         private void culcButton_Click(object sender, EventArgs e)
@@ -48,45 +55,48 @@ namespace Расчёт_нагнетательной_турбомашины
             double H2 = -1;
             double Q2 = -1;
             double n = -1;
+            int alpha = -1;
             try
             {
                 n = double.Parse(nBox.Text);
                 H2 = double.Parse(H2_TextBox.Text);
                 Q2 = double.Parse(Q2_TextBox.Text);
+                alpha = int.Parse(alphaBox.Text);
                 if (H2 == 0 || Q2 == 0 || H2 > 50 || Q2 > 50 || n == 0)
                     throw new Exception();
             }
-            catch (Exception) { MessageBox.Show("Ошибка! Вводите числа!"); }
+            catch (Exception)
+            {
+                MessageBox.Show("Ошибка! Вводите числа!");
+                return;
+            }
 
             dbConnection = new SQLiteConnection(dbName + ";Version=3;");
             dbCommand.Connection = dbConnection;
             
-            int t0_C = getInt("t0C");
             double d_vs = getDouble("d_vs") / 1000;
             double d_n = getDouble("d_n") / 1000;
             int l_vs = getInt("l_vs");
             int l_n = getInt("l_n");
             double h_vs = getDouble("h_vs");
             double h_n = getDouble("h_n");
-            int p_2 = getInt("p_2") * 1000;
             double Lyambda = getDouble("Lyambda");
-            int Zeta_kr = getInt("Zeta_kr");
-            int C = getInt("C");
-            double p0 = getDouble("p_a");
-            int p = getInt("p");
-            int a = getInt("a");
-            int Zeta_otkr = getInt("Zeta_otkr");
             int Zeta_C = getInt("Zeta_C");
             double Zeta_pov = getDouble("Zeta_pov");
+            int Zeta_otkr = getInt("Zeta_otkr");
+            int Zeta_kr = getInt("Zeta_kr");
+            int C = getInt("C");
+            double p_a = getDouble("p_a");
+            int p_2 = getInt("p_2") * 1000;
+            int p = getInt("p");
+            int t0_C = getInt("t0C");
+            int a = getInt("a");
 
-            int alpha = int.Parse(alphaBox.Text);
-            
 
-
-            H_c1 = h_vs + h_n + (p_2 / (p * g));
+            double H_c1 = h_vs + h_n + (p_2 / (p * g));
             double H_temp_vs = 8 / (pi * pi * Math.Pow(d_vs, 4) * g);
             double H_temp_n = 8 / (pi * pi * Math.Pow(d_n, 4) * g);
-            H_c2 = Lyambda * (l_vs / d_vs) * H_temp_vs + Zeta_C * H_temp_vs + Zeta_pov * H_temp_vs + Lyambda * (l_n / d_n) * H_temp_n + Zeta_otkr * H_temp_n + 2 * Zeta_pov * H_temp_n;
+            double H_c2 = Lyambda * (l_vs / d_vs) * H_temp_vs + Zeta_C * H_temp_vs + Zeta_pov * H_temp_vs + Lyambda * (l_n / d_n) * H_temp_n + Zeta_otkr * H_temp_n + 2 * Zeta_pov * H_temp_n;
             
             H_cLabel.Text = "H c = (" + h_vs.ToString() + " + " + h_n.ToString() + " + (" + p_2.ToString() + " *10^3) / (" + p.ToString()
                 + " * " + g.ToString() + ")) + Q^2 * (" + Zeta_C.ToString() + " * \n8 / (pi^2 * " + d_vs.ToString() + "^4 * 9.81) + "
@@ -185,6 +195,29 @@ namespace Расчёт_нагнетательной_турбомашины
             nu3Box.Text = nu3.ToString();
             Nn3Box.Text = Nn3.ToString();
             N3Box.Text = N3.ToString();
+            #endregion
+
+            #region Пункт 4
+            ListOfHc_ = new List<double>();
+            double H_c2_ = Lyambda * (l_vs / d_vs) * H_temp_vs + Zeta_C * H_temp_vs + Zeta_pov * H_temp_vs + Lyambda * (l_n / d_n) * H_temp_n + Zeta_kr * H_temp_n + 2 * Zeta_pov * H_temp_n;
+            foreach (int i in ListOfQ_long)
+                ListOfHc_.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2_);
+
+            List<double[]> H_Hc__crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc_);
+            H_Hc__crossPoint = H_Hc__crossPoint_list[0];
+            H_Hc__nu_point = H_Hc__crossPoint_list[1];
+
+            double Q4 = H_Hc__crossPoint[0];
+            double H4 = H_Hc__crossPoint[1];
+            double nu4 = H_Hc__nu_point[1];
+            double Nn4 = p * g * H4 * Q4 * 0.000001;
+            double N4 = Nn4 / nu4 * 100;
+
+            Q4Box.Text = Q4.ToString();
+            H4Box.Text = H4.ToString();
+            nu4Box.Text = nu4.ToString();
+            Nn4Box.Text = Nn4.ToString();
+            N4Box.Text = N4.ToString();
             #endregion
         }
 
@@ -296,7 +329,14 @@ namespace Расчёт_нагнетательной_турбомашины
 
         private void graphButton_Click(object sender, EventArgs e)
         {
-            Form grafik = new Grafik(tabControl.SelectedIndex + 1, ListOfQ, ListOfQ_long, ListOfH, ListOfnu, ListOfHc, ListOfH3pod, H_Hc_crossPoint, H_Hc_nu_point, H_H3pod_crossPoint, H_H3pod_nu_point, H31, H32);
+            Form grafik = new Grafik(
+                tabControl.SelectedIndex + 1, 
+                ListOfQ, ListOfQ_long, ListOfH, ListOfnu, 
+                ListOfHc, ListOfH3pod, ListOfHc_,
+                H_Hc_crossPoint, H_Hc_nu_point,
+                H31, H32,
+                H_H3pod_crossPoint, H_H3pod_nu_point,
+                H_Hc__crossPoint, H_Hc__nu_point);
             grafik.Text = "Вариант " + variantBox.SelectedItem.ToString();
             grafik.Show();
         }
