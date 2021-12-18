@@ -16,38 +16,43 @@ namespace Расчёт_нагнетательной_турбомашины
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-            variantBox.SelectedIndex = 30;
-            // H = −0.06766x^2 + 0.90276x + 52.44933
-            // КПД = −0.00363x^3 + 0.01554x^2 + 3.96383x − 1.98288
-        }
-
         private readonly string dbName = string.Format("Data Source={0}", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Nasosi.db"));
         SQLiteConnection dbConnection = new SQLiteConnection();
         private readonly SQLiteCommand dbCommand = new SQLiteCommand();
         private const double g = 9.81;
         private const double pi = Math.PI;
 
-        List<int> ListOfQ = new List<int> 
+        readonly Dictionary<string, List<int>> intLists = new Dictionary<string, List<int>>();
+        readonly Dictionary<string, List<double>> doubleLists = new Dictionary<string, List<double>>();
+        readonly Dictionary<string, double[]> doubleArrays = new Dictionary<string, double[]>();
+
+        readonly List<int> ListOfQ = new List<int>
         { 0, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 };
-        
-        List<int> ListOfQ_long = new List<int> 
+
+        readonly List<int> ListOfQ_long = new List<int> 
         { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
             29, 30, 31, 32, 33, 34, 35 };
-        
-        List<double> ListOfH = new List<double> 
+
+        readonly List<double> ListOfH = new List<double> 
         { 55, 54.5, 53, 52.6, 52.05, 51.45, 50.7, 50, 49.2, 48.4, 47.4, 46.3, 45, 43.45, 41.65, 39.65, 37.5,
                 35, 32.2, 29.15, 25.9, 22.4, 19, 15.35, 11.6, 7.65, 3.95, 0 };
-        
-        List<double> ListOfnu = new List<double> 
+
+        readonly List<double> ListOfnu = new List<double> 
         { 0, 20, 35, 37.6, 40.25, 42.75, 45, 47, 48.75, 50.25, 51.65, 52.9, 54.1, 55.15, 55.9, 56.2, 55.6, 54,
                 51, 47, 42.25, 36.8, 31, 24.8, 18.85, 12.5, 6.35, 0 };
         
-        List<double> ListOfHc, ListOfH3pod, ListOfHc_;
-        double[] H_Hc_crossPoint, H_Hc_nu_point, H_H3pod_crossPoint, H_H3pod_nu_point, H_Hc__crossPoint, H_Hc__nu_point;
-        double[] H31, H32;
+        public Form1()
+        {
+            InitializeComponent();
+            variantBox.SelectedIndex = 30;
+            intLists["ListOfQ"] = ListOfQ;
+            intLists["ListOfQ_long"] = ListOfQ_long;
+
+            doubleLists["ListOfH"] = ListOfH;
+            doubleLists["ListOfnu"] = ListOfnu;
+            // H = −0.06766x^2 + 0.90276x + 52.44933
+            // КПД = −0.00363x^3 + 0.01554x^2 + 3.96383x − 1.98288
+        }
 
         private void culcButton_Click(object sender, EventArgs e)
         {
@@ -108,17 +113,20 @@ namespace Расчёт_нагнетательной_турбомашины
                 
             Cursor.Current = Cursors.Default;
             graphButton.Enabled = true;
-            
 
-            ListOfHc = new List<double>();
-            ListOfH3pod = new List<double>();
+
+            List<double> ListOfHc = new List<double>();
+            List<double> ListOfH3pod = new List<double>();
 
             foreach (int i in ListOfQ_long)
                 ListOfHc.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2);
+            doubleLists["ListOfHc"] = ListOfHc;
 
             List<double[]> H_Hc_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc);
-            H_Hc_crossPoint = H_Hc_crossPoint_list[0];
-            H_Hc_nu_point = H_Hc_crossPoint_list[1];
+            double[] H_Hc_crossPoint = H_Hc_crossPoint_list[0];
+            double[] H_Hc_nu_point = H_Hc_crossPoint_list[1];
+            doubleArrays["H_Hc_crossPoint"] = H_Hc_crossPoint;
+            doubleArrays["H_Hc_nu_point"] = H_Hc_nu_point;
 
             #region Пункт 1
             double Q1 = H_Hc_crossPoint[0];
@@ -167,13 +175,16 @@ namespace Расчёт_нагнетательной_турбомашины
             double Q3 = Q1 * ((double) alpha / 100 + 1);
             Q3Box.Text = Q3.ToString();
 
-            H31 = new double[2];
-            H32 = new double[2];
+            double[] H31 = new double[2];
+            double[] H32 = new double[2];
             H31[0] = Q3;
             H31[1] = 0;
 
             H32[0] = Q3;
             H32[1] = H_c1 + Math.Pow(Q3 * Math.Pow(10, -3), 2) * H_c2;
+
+            doubleArrays["H31"] = H31;
+            doubleArrays["H32"] = H32;
 
             double H3 = H32[1];
             H3Box.Text = H3.ToString();
@@ -181,10 +192,13 @@ namespace Расчёт_нагнетательной_турбомашины
             double H3pod_ = H3 / Math.Pow(Q3, 2);
             foreach (int i in ListOfQ_long)
                 ListOfH3pod.Add(H3pod_ * Math.Pow(i, 2));
+            doubleLists["ListOfH3pod"] = ListOfH3pod;
 
             List<double[]> H_H3pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH3pod);
-            H_H3pod_crossPoint = H_H3pod_crossPoint_list[0];
-            H_H3pod_nu_point = H_H3pod_crossPoint_list[1];
+            double[] H_H3pod_crossPoint = H_H3pod_crossPoint_list[0];
+            double[] H_H3pod_nu_point = H_H3pod_crossPoint_list[1];
+            doubleArrays["H_H3pod_crossPoint"] = H_H3pod_crossPoint;
+            doubleArrays["H_H3pod_nu_point"] = H_H3pod_nu_point;
 
             double n3 = Math.Round(n * (Q3 / H_H3pod_crossPoint[0]));
             double nu3 = H_H3pod_nu_point[1];
@@ -198,14 +212,17 @@ namespace Расчёт_нагнетательной_турбомашины
             #endregion
 
             #region Пункт 4
-            ListOfHc_ = new List<double>();
+            List<double> ListOfHc_ = new List<double>();
             double H_c2_ = Lyambda * (l_vs / d_vs) * H_temp_vs + Zeta_C * H_temp_vs + Zeta_pov * H_temp_vs + Lyambda * (l_n / d_n) * H_temp_n + Zeta_kr * H_temp_n + 2 * Zeta_pov * H_temp_n;
             foreach (int i in ListOfQ_long)
                 ListOfHc_.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2_);
+            doubleLists["ListOfHc_"] = ListOfHc_;
 
             List<double[]> H_Hc__crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc_);
-            H_Hc__crossPoint = H_Hc__crossPoint_list[0];
-            H_Hc__nu_point = H_Hc__crossPoint_list[1];
+            double[] H_Hc__crossPoint = H_Hc__crossPoint_list[0];
+            double[] H_Hc__nu_point = H_Hc__crossPoint_list[1];
+            doubleArrays["H_Hc__crossPoint"] = H_Hc__crossPoint;
+            doubleArrays["H_Hc__nu_point"] = H_Hc__nu_point;
 
             double Q4 = H_Hc__crossPoint[0];
             double H4 = H_Hc__crossPoint[1];
@@ -331,12 +348,9 @@ namespace Расчёт_нагнетательной_турбомашины
         {
             Form grafik = new Grafik(
                 tabControl.SelectedIndex + 1, 
-                ListOfQ, ListOfQ_long, ListOfH, ListOfnu, 
-                ListOfHc, ListOfH3pod, ListOfHc_,
-                H_Hc_crossPoint, H_Hc_nu_point,
-                H31, H32,
-                H_H3pod_crossPoint, H_H3pod_nu_point,
-                H_Hc__crossPoint, H_Hc__nu_point);
+                intLists,
+                doubleLists,
+                doubleArrays);
             grafik.Text = "Вариант " + variantBox.SelectedItem.ToString();
             grafik.Show();
         }
