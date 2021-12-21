@@ -57,10 +57,10 @@ namespace Расчёт_нагнетательной_турбомашины
         private void culcButton_Click(object sender, EventArgs e)
         {
             Cursor.Current = Cursors.AppStarting;
-            double H2 = -1;
-            double Q2 = -1;
-            double n = -1;
-            int alpha = -1;
+            double H2;
+            double Q2;
+            double n;
+            int alpha;
             try
             {
                 n = double.Parse(nBox.Text);
@@ -116,7 +116,6 @@ namespace Расчёт_нагнетательной_турбомашины
 
 
             List<double> ListOfHc = new List<double>();
-            List<double> ListOfH3pod = new List<double>();
 
             foreach (int i in ListOfQ_long)
                 ListOfHc.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2);
@@ -190,6 +189,7 @@ namespace Расчёт_нагнетательной_турбомашины
             H3Box.Text = H3.ToString();
 
             double H3pod_ = H3 / Math.Pow(Q3, 2);
+            List<double> ListOfH3pod = new List<double>();
             foreach (int i in ListOfQ_long)
                 ListOfH3pod.Add(H3pod_ * Math.Pow(i, 2));
             doubleLists["ListOfH3pod"] = ListOfH3pod;
@@ -235,6 +235,46 @@ namespace Расчёт_нагнетательной_турбомашины
             nu4Box.Text = nu4.ToString();
             Nn4Box.Text = Nn4.ToString();
             N4Box.Text = N4.ToString();
+            #endregion
+
+            #region Пункт 5
+            double Q5 = Q4;
+            double[] H51 = new double[2];
+            double[] H52 = new double[2];
+            H51[0] = Q5;
+            H51[1] = 0;
+
+            H52[0] = Q5;
+            H52[1] = H_c1 + Math.Pow(Q5 * Math.Pow(10, -3), 2) * H_c2;
+
+            doubleArrays["H51"] = H51;
+            doubleArrays["H52"] = H52;
+
+            double H5 = H52[1];
+
+            double H5pod_ = H5 / Math.Pow(Q5, 2);
+            List<double> ListOfH5pod = new List<double>();
+            foreach (int i in ListOfQ_long)
+                ListOfH5pod.Add(H5pod_ * Math.Pow(i, 2));
+            doubleLists["ListOfH5pod"] = ListOfH5pod;
+
+            List<double[]> H_H5pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH5pod);
+            double[] H_H5pod_crossPoint = H_H5pod_crossPoint_list[0];
+            double[] H_H5pod_nu_point = H_H5pod_crossPoint_list[1];
+            doubleArrays["H_H5pod_crossPoint"] = H_H5pod_crossPoint;
+            doubleArrays["H_H5pod_nu_point"] = H_H5pod_nu_point;
+
+            double n5 = Math.Round(n * (Q5 / H_H5pod_crossPoint[0]));
+            double nu5 = H_H5pod_nu_point[1];
+            double Nn5 = p * g * H5 * Q5 * 0.000001;
+            double N5 = Nn5 / nu5 * 100;
+
+            H5Box.Text = H5.ToString();
+            Q5Box.Text = Q5.ToString();
+            n_5Box.Text = n5.ToString();
+            nu5Box.Text = nu5.ToString();
+            Nn5Box.Text = Nn5.ToString();
+            N5Box.Text = N5.ToString();
             #endregion
         }
 

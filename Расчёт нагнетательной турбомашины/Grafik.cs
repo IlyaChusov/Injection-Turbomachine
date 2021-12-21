@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZedGraph;
 
@@ -71,7 +66,7 @@ namespace Расчёт_нагнетательной_турбомашины
                     break;
                 case 3:
                     PointPairList H3podPairList = new PointPairList();
-                    PointPairList Hc_0_linePairList = new PointPairList();
+                    PointPairList Hc_0_3_linePairList = new PointPairList();
                     PointPairList H_H3pod_nu_linePairList = new PointPairList();
                     List<double> ListOfH3pod = doubleLists["ListOfH3pod"];
                     double[] H31 = doubleArrays["H31"];
@@ -80,13 +75,13 @@ namespace Расчёт_нагнетательной_турбомашины
                     double[] H_H3pod_nu_point = doubleArrays["H_H3pod_nu_point"];
                     for (int i = 0; i < ListOfQ_long.Count; i++)
                         H3podPairList.Add(ListOfQ_long[i], ListOfH3pod[i]);
-                    Hc_0_linePairList.Add(H31[0], H31[1]);
-                    Hc_0_linePairList.Add(H32[0], H32[1]);
+                    Hc_0_3_linePairList.Add(H31[0], H31[1]);
+                    Hc_0_3_linePairList.Add(H32[0], H32[1]);
                     H_H3pod_nu_linePairList.Add(H_H3pod_crossPoint[0], H_H3pod_crossPoint[1]);
                     H_H3pod_nu_linePairList.Add(H_H3pod_nu_point[0], H_H3pod_nu_point[1]);
 
                     MyPane.AddCurve("H3 под", H3podPairList, Color.RosyBrown, SymbolType.Diamond);
-                    MyPane.AddCurve("", Hc_0_linePairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("", Hc_0_3_linePairList, Color.Black, SymbolType.Circle);
                     MyPane.AddCurve("", H_H3pod_nu_linePairList, Color.Black, SymbolType.Circle);
                     break;
                 case 4:
@@ -103,6 +98,26 @@ namespace Расчёт_нагнетательной_турбомашины
                     MyPane.AddCurve("H'c", Hc__PairList, Color.RosyBrown, SymbolType.Diamond);
                     MyPane.AddCurve("", H_Hc__nu_linePairList, Color.Black, SymbolType.Circle);
                     break;
+                case 5:
+                    PointPairList H5podPairList = new PointPairList();
+                    PointPairList Hc_0_5_linePairList = new PointPairList();
+                    PointPairList H_H5pod_nu_linePairList = new PointPairList();
+                    List<double> ListOfH5pod = doubleLists["ListOfH5pod"];
+                    double[] H51 = doubleArrays["H51"];
+                    double[] H52 = doubleArrays["H52"];
+                    double[] H_H5pod_crossPoint = doubleArrays["H_H5pod_crossPoint"];
+                    double[] H_H5pod_nu_point = doubleArrays["H_H5pod_nu_point"];
+                    for (int i = 0; i < ListOfQ_long.Count; i++)
+                        H5podPairList.Add(ListOfQ_long[i], ListOfH5pod[i]);
+                    Hc_0_5_linePairList.Add(H51[0], H51[1]);
+                    Hc_0_5_linePairList.Add(H52[0], H52[1]);
+                    H_H5pod_nu_linePairList.Add(H_H5pod_crossPoint[0], H_H5pod_crossPoint[1]);
+                    H_H5pod_nu_linePairList.Add(H_H5pod_nu_point[0], H_H5pod_nu_point[1]);
+
+                    MyPane.AddCurve("H5 под", H5podPairList, Color.RosyBrown, SymbolType.Diamond);
+                    MyPane.AddCurve("", Hc_0_5_linePairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("", H_H5pod_nu_linePairList, Color.Black, SymbolType.Circle);
+                    break;
             }
 
             MyGraph.AxisChange();
@@ -111,8 +126,7 @@ namespace Расчёт_нагнетательной_турбомашины
 
         private void MyGraph_MouseMove(object sender, MouseEventArgs e)
         {
-            double x, y;
-            MyGraph.GraphPane.ReverseTransform(e.Location, out x, out y);
+            MyGraph.GraphPane.ReverseTransform(e.Location, out double x, out double y);
             string text = string.Format("Q (л/с): {0};     H (м): {1}", Math.Round(x, 5), Math.Round(y, 5));
             labelXY.Text = text;
         }

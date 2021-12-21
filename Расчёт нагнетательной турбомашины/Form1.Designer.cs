@@ -99,11 +99,30 @@
             this.label39 = new System.Windows.Forms.Label();
             this.tab5 = new System.Windows.Forms.TabPage();
             this.tab6 = new System.Windows.Forms.TabPage();
+            this.n_5Box = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.N5Box = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.Nn5Box = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.nu5Box = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.H5Box = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.Q5Box = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tab2.SuspendLayout();
             this.tab3.SuspendLayout();
             this.tab4.SuspendLayout();
+            this.tab5.SuspendLayout();
             this.SuspendLayout();
             // 
             // variantBox
@@ -891,6 +910,24 @@
             // 
             // tab5
             // 
+            this.tab5.Controls.Add(this.n_5Box);
+            this.tab5.Controls.Add(this.label40);
+            this.tab5.Controls.Add(this.label41);
+            this.tab5.Controls.Add(this.N5Box);
+            this.tab5.Controls.Add(this.label42);
+            this.tab5.Controls.Add(this.label43);
+            this.tab5.Controls.Add(this.Nn5Box);
+            this.tab5.Controls.Add(this.label44);
+            this.tab5.Controls.Add(this.label45);
+            this.tab5.Controls.Add(this.nu5Box);
+            this.tab5.Controls.Add(this.label46);
+            this.tab5.Controls.Add(this.label47);
+            this.tab5.Controls.Add(this.H5Box);
+            this.tab5.Controls.Add(this.label48);
+            this.tab5.Controls.Add(this.label49);
+            this.tab5.Controls.Add(this.Q5Box);
+            this.tab5.Controls.Add(this.label50);
+            this.tab5.Controls.Add(this.label51);
             this.tab5.Location = new System.Drawing.Point(4, 22);
             this.tab5.Name = "tab5";
             this.tab5.Padding = new System.Windows.Forms.Padding(3);
@@ -908,6 +945,186 @@
             this.tab6.TabIndex = 5;
             this.tab6.Text = "Пункт 6";
             this.tab6.UseVisualStyleBackColor = true;
+            // 
+            // n_5Box
+            // 
+            this.n_5Box.Location = new System.Drawing.Point(51, 53);
+            this.n_5Box.Margin = new System.Windows.Forms.Padding(2);
+            this.n_5Box.Name = "n_5Box";
+            this.n_5Box.ReadOnly = true;
+            this.n_5Box.Size = new System.Drawing.Size(114, 20);
+            this.n_5Box.TabIndex = 62;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(16, 56);
+            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(31, 13);
+            this.label40.TabIndex = 61;
+            this.label40.Text = "n 5 =";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label41.Location = new System.Drawing.Point(173, 56);
+            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(44, 13);
+            this.label41.TabIndex = 63;
+            this.label41.Text = "об/мин";
+            // 
+            // N5Box
+            // 
+            this.N5Box.Location = new System.Drawing.Point(51, 125);
+            this.N5Box.Margin = new System.Windows.Forms.Padding(2);
+            this.N5Box.Name = "N5Box";
+            this.N5Box.ReadOnly = true;
+            this.N5Box.Size = new System.Drawing.Size(114, 20);
+            this.N5Box.TabIndex = 59;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(17, 128);
+            this.label42.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(30, 13);
+            this.label42.TabIndex = 58;
+            this.label42.Text = "N5 =";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label43.Location = new System.Drawing.Point(173, 128);
+            this.label43.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(25, 13);
+            this.label43.TabIndex = 60;
+            this.label43.Text = "кВт";
+            // 
+            // Nn5Box
+            // 
+            this.Nn5Box.Location = new System.Drawing.Point(51, 101);
+            this.Nn5Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Nn5Box.Name = "Nn5Box";
+            this.Nn5Box.ReadOnly = true;
+            this.Nn5Box.Size = new System.Drawing.Size(114, 20);
+            this.Nn5Box.TabIndex = 56;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(8, 104);
+            this.label44.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(39, 13);
+            this.label44.TabIndex = 55;
+            this.label44.Text = "N n5 =";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label45.Location = new System.Drawing.Point(173, 104);
+            this.label45.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(25, 13);
+            this.label45.TabIndex = 57;
+            this.label45.Text = "кВт";
+            // 
+            // nu5Box
+            // 
+            this.nu5Box.Location = new System.Drawing.Point(51, 77);
+            this.nu5Box.Margin = new System.Windows.Forms.Padding(2);
+            this.nu5Box.Name = "nu5Box";
+            this.nu5Box.ReadOnly = true;
+            this.nu5Box.Size = new System.Drawing.Size(114, 20);
+            this.nu5Box.TabIndex = 53;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(10, 80);
+            this.label46.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(37, 13);
+            this.label46.TabIndex = 52;
+            this.label46.Text = "nu 5 =";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label47.Location = new System.Drawing.Point(173, 80);
+            this.label47.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(15, 13);
+            this.label47.TabIndex = 54;
+            this.label47.Text = "%";
+            // 
+            // H5Box
+            // 
+            this.H5Box.Location = new System.Drawing.Point(51, 29);
+            this.H5Box.Margin = new System.Windows.Forms.Padding(2);
+            this.H5Box.Name = "H5Box";
+            this.H5Box.ReadOnly = true;
+            this.H5Box.Size = new System.Drawing.Size(114, 20);
+            this.H5Box.TabIndex = 50;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(14, 32);
+            this.label48.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(33, 13);
+            this.label48.TabIndex = 49;
+            this.label48.Text = "H 5 =";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label49.Location = new System.Drawing.Point(173, 32);
+            this.label49.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(15, 13);
+            this.label49.TabIndex = 51;
+            this.label49.Text = "м";
+            // 
+            // Q5Box
+            // 
+            this.Q5Box.Location = new System.Drawing.Point(51, 5);
+            this.Q5Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Q5Box.Name = "Q5Box";
+            this.Q5Box.ReadOnly = true;
+            this.Q5Box.Size = new System.Drawing.Size(114, 20);
+            this.Q5Box.TabIndex = 47;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(14, 8);
+            this.label50.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(33, 13);
+            this.label50.TabIndex = 46;
+            this.label50.Text = "Q 5 =";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label51.Location = new System.Drawing.Point(173, 8);
+            this.label51.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(24, 13);
+            this.label51.TabIndex = 48;
+            this.label51.Text = "л/с";
             // 
             // Form1
             // 
@@ -944,6 +1161,8 @@
             this.tab3.PerformLayout();
             this.tab4.ResumeLayout(false);
             this.tab4.PerformLayout();
+            this.tab5.ResumeLayout(false);
+            this.tab5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1022,6 +1241,24 @@
         private System.Windows.Forms.TextBox Q4Box;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox n_5Box;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox N5Box;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox Nn5Box;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox nu5Box;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox H5Box;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox Q5Box;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
     }
 }
 
