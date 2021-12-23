@@ -118,6 +118,31 @@ namespace Расчёт_нагнетательной_турбомашины
                     MyPane.AddCurve("", Hc_0_5_linePairList, Color.Black, SymbolType.Circle);
                     MyPane.AddCurve("", H_H5pod_nu_linePairList, Color.Black, SymbolType.Circle);
                     break;
+                case 6:
+                    PointPairList KPD_linePairList = new PointPairList();
+                    PointPairList KPD_nu_linePairList = new PointPairList();
+                    double[] KPD_crossPoint = doubleArrays["KPD_crossPoint"];
+                    double[] KPD_nu_crossPoint = doubleArrays["KPD_nu_crossPoint"];
+                    KPD_linePairList.Add(KPD_crossPoint[0], KPD_crossPoint[1]);
+                    KPD_nu_linePairList.Add(KPD_nu_crossPoint[0], KPD_nu_crossPoint[1]);
+
+                    MyPane.AddCurve("", KPD_linePairList, Color.RosyBrown, SymbolType.Diamond);
+                    MyPane.AddCurve("", KPD_nu_linePairList, Color.Black, SymbolType.Circle);
+                    break;
+                case 7:
+                    PointPairList nuMaxPointPairList = new PointPairList();
+                    PointPairList H_cPairList = new PointPairList();
+                    double[] nuMaxPoint = doubleArrays["nuMaxPoint"];
+                    double[] HOfNuMaxPoint = doubleArrays["HOfNuMaxPoint"];
+                    List<double> ListOfH_c = doubleLists["ListOfH_c"];
+                    nuMaxPointPairList.Add(nuMaxPoint[0], nuMaxPoint[1]);
+                    nuMaxPointPairList.Add(HOfNuMaxPoint[0], HOfNuMaxPoint[1]);
+                    for (int i = 0; i < ListOfQ_long.Count; i++)
+                        H_cPairList.Add(ListOfQ_long[i], ListOfH_c[i]);
+
+                    MyPane.AddCurve("H'c", H_cPairList, Color.Brown, SymbolType.Diamond);
+                    MyPane.AddCurve("", nuMaxPointPairList, Color.Black, SymbolType.Circle);
+                    break;
             }
 
             MyGraph.AxisChange();

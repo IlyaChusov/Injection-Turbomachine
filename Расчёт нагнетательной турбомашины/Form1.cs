@@ -61,13 +61,15 @@ namespace Расчёт_нагнетательной_турбомашины
             double Q2;
             double n;
             int alpha;
+            double KPD;
             try
             {
                 n = double.Parse(nBox.Text);
                 H2 = double.Parse(H2_TextBox.Text);
                 Q2 = double.Parse(Q2_TextBox.Text);
                 alpha = int.Parse(alphaBox.Text);
-                if (H2 == 0 || Q2 == 0 || H2 > 50 || Q2 > 50 || n == 0)
+                KPD = double.Parse(KPDBox.Text);
+                if (H2 == 0 || Q2 == 0 || H2 > 50 || Q2 > 50 || n == 0 || KPD == 0)
                     throw new Exception();
             }
             catch (Exception)
@@ -121,7 +123,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 ListOfHc.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2);
             doubleLists["ListOfHc"] = ListOfHc;
 
-            List<double[]> H_Hc_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc);
+            List<double[]> H_Hc_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc, true);
             double[] H_Hc_crossPoint = H_Hc_crossPoint_list[0];
             double[] H_Hc_nu_point = H_Hc_crossPoint_list[1];
             doubleArrays["H_Hc_crossPoint"] = H_Hc_crossPoint;
@@ -144,30 +146,30 @@ namespace Расчёт_нагнетательной_турбомашины
             #region Пункт 2
             // Расчёт d
             // Значения, которые можно рассчитать
-            double temp_vs = (H2 - H_c1) / Math.Pow(Q2 * Math.Pow(10, -3), 2) - Lyambda * H_temp_vs * (l_vs / d_vs) - Zeta_C * H_temp_vs -
-            Zeta_pov * H_temp_vs;
+            //double temp_vs = (H2 - H_c1) / Math.Pow(Q2 * Math.Pow(10, -3), 2) - Lyambda * H_temp_vs * (l_vs / d_vs) - Zeta_C * H_temp_vs -
+            //Zeta_pov * H_temp_vs;
 
-            Cursor.Current = Cursors.WaitCursor;
-            double temp_n = 0;
-            double temp_nt;
-            double counter = 0.003;
-            bool fail = false;
-            while (Math.Abs(temp_vs - temp_n) > 0.01)
-            {
-                if ((temp_vs - temp_n > 100) && (counter > 0.0032))
-                {
-                    MessageBox.Show("Не найдено!");
-                    fail = true;
-                    break;
-                }
-                counter += 0.000000001;
-                counter = Math.Round(counter, 9);
-                temp_nt = Math.Round(8 / (pi * pi * Math.Pow(counter, 4) * g), 9);
-                temp_n = Math.Round((temp_nt * (Lyambda * l_n / counter)) + Zeta_otkr * temp_nt + 2 * Zeta_pov * temp_nt, 9);
-            }
-            if (!fail)
-                d_Label.Text = "d ≈ " + counter.ToString();
-            Cursor.Current = Cursors.Default;
+            //Cursor.Current = Cursors.WaitCursor;
+            //double temp_n = 0;
+            //double temp_nt;
+            //double counter = 0.003;
+            //bool fail = false;
+            //while (Math.Abs(temp_vs - temp_n) > 0.01)
+            //{
+            //    if ((temp_vs - temp_n > 100) && (counter > 0.0032))
+            //    {
+            //        MessageBox.Show("Не найдено!");
+            //        fail = true;
+            //        break;
+            //    }
+            //    counter += 0.000000001;
+            //    counter = Math.Round(counter, 9);
+            //    temp_nt = Math.Round(8 / (pi * pi * Math.Pow(counter, 4) * g), 9);
+            //    temp_n = Math.Round((temp_nt * (Lyambda * l_n / counter)) + Zeta_otkr * temp_nt + 2 * Zeta_pov * temp_nt, 9);
+            //}
+            //if (!fail)
+            //    d_Label.Text = "d ≈ " + counter.ToString();
+            //Cursor.Current = Cursors.Default;
             #endregion
 
             #region Пункт 3
@@ -194,7 +196,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 ListOfH3pod.Add(H3pod_ * Math.Pow(i, 2));
             doubleLists["ListOfH3pod"] = ListOfH3pod;
 
-            List<double[]> H_H3pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH3pod);
+            List<double[]> H_H3pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH3pod, true);
             double[] H_H3pod_crossPoint = H_H3pod_crossPoint_list[0];
             double[] H_H3pod_nu_point = H_H3pod_crossPoint_list[1];
             doubleArrays["H_H3pod_crossPoint"] = H_H3pod_crossPoint;
@@ -218,7 +220,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 ListOfHc_.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2_);
             doubleLists["ListOfHc_"] = ListOfHc_;
 
-            List<double[]> H_Hc__crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc_);
+            List<double[]> H_Hc__crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc_, true);
             double[] H_Hc__crossPoint = H_Hc__crossPoint_list[0];
             double[] H_Hc__nu_point = H_Hc__crossPoint_list[1];
             doubleArrays["H_Hc__crossPoint"] = H_Hc__crossPoint;
@@ -258,7 +260,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 ListOfH5pod.Add(H5pod_ * Math.Pow(i, 2));
             doubleLists["ListOfH5pod"] = ListOfH5pod;
 
-            List<double[]> H_H5pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH5pod);
+            List<double[]> H_H5pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH5pod, true);
             double[] H_H5pod_crossPoint = H_H5pod_crossPoint_list[0];
             double[] H_H5pod_nu_point = H_H5pod_crossPoint_list[1];
             doubleArrays["H_H5pod_crossPoint"] = H_H5pod_crossPoint;
@@ -276,17 +278,85 @@ namespace Расчёт_нагнетательной_турбомашины
             Nn5Box.Text = Nn5.ToString();
             N5Box.Text = N5.ToString();
             #endregion
+
+            #region Пункт 6
+            double n6 = n * (1 - alpha);
+            Tuple<double, double> firstPoint = null;
+            Tuple<double, double> secondPoint = null;
+
+            for (int i = 0; i < ListOfnu.Count; i++)
+            {
+                double prevPoint = -1;
+                double curPoint = ListOfnu[i];
+                if (i != 0)
+                    prevPoint = ListOfnu[i - 1];
+
+                if (firstPoint == null)
+                {
+                    if (curPoint >= KPD)
+                    {
+                        if (prevPoint == -1)
+                        {
+                            MessageBox.Show("Значение КПД слишком низкое", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        firstPoint = Tuple.Create(prevPoint, curPoint);
+                    }
+                }
+                else if (curPoint <= KPD)
+                {
+                    secondPoint = Tuple.Create(curPoint, prevPoint);
+                    break;
+                }
+            }
+
+            List<double[]> KPD_crossPoint_list = getCrossingLinesPoint(
+                ListOfnu,
+                new List<double>() { KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD },
+                false);
+            double[] KPD_crossPoint = KPD_crossPoint_list[0];
+            double[] KPD_nu_crossPoint = KPD_crossPoint_list[1];
+            doubleArrays["KPD_crossPoint"] = KPD_crossPoint;
+            doubleArrays["KPD_nu_crossPoint"] = KPD_nu_crossPoint;
+
+
+            #endregion
+
+            #region Пункт 7
+            double nuMax = ListOfnu.Max();
+            int nuMaxIndex = ListOfnu.IndexOf(nuMax);
+            int qOfNuMax = ListOfQ[nuMaxIndex];
+            double[] nuMaxPoint = new double[] { qOfNuMax, nuMax};
+            double[] HOfNuMaxPoint = new double[] { qOfNuMax, ListOfH[nuMaxIndex]};
+            doubleArrays["nuMaxPoint"] = nuMaxPoint;
+            doubleArrays["HOfNuMaxPoint"] = HOfNuMaxPoint;
+
+            double Hct = ListOfH[nuMaxIndex] - H_c2 * 0.000001 * Math.Pow(qOfNuMax, 2);
+            double hvs_hn = Hct - p_2 / (p * g);
+            List<double> ListOfH_c = new List<double>();
+            foreach (int i in ListOfQ_long)
+                ListOfH_c.Add(Hct + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2);
+            doubleLists["ListOfH_c"] = ListOfH_c;
+
+            hvs_hnBox.Text = hvs_hn.ToString();
+            #endregion
         }
 
-        private List<double[]> getCrossingLinesPoint(List<double> smallList, List<double> list)
+        private List<double[]> getCrossingLinesPoint(List<double> smallList, List<double> list, bool longList)
         {
             // Расчёт точки пересечения
             int maxIndex = 0, max2Index = 0;
             double max = smallList.Max(), max2 = smallList.Max();
+            int longInt = 0;
+            if (longList)
+                longInt = 8;
+            int j = 0;
+            if (longList)
+                j = 2;
 
-            for (int i = 2; i < smallList.Count; i++)
+            for (int i = j; i < smallList.Count; i++)
             {
-                double temp = Math.Abs(smallList[i] - list[i + 8]);
+                double temp = Math.Abs(smallList[i] - list[i + longInt]);
                 if (temp < max)
                 {
                     max = temp;
@@ -308,7 +378,7 @@ namespace Расчёт_нагнетательной_турбомашины
             double y_H = x2_H - x1_H;
             double C_H = -(x1_H * y2_H - x2_H * y1_H);
 
-            double y1_Hc = list[maxIndex + 8], y2_Hc = list[max2Index + 8];
+            double y1_Hc = list[maxIndex + longInt], y2_Hc = list[max2Index + longInt];
             double x1_Hc = ListOfQ[maxIndex], x2_Hc = ListOfQ[max2Index];
             double x_Hc = Math.Round(y1_Hc - y2_Hc, 10);
             double y_Hc = x2_Hc - x1_Hc;
