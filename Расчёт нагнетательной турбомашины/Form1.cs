@@ -50,8 +50,6 @@ namespace Расчёт_нагнетательной_турбомашины
 
             doubleLists["ListOfH"] = ListOfH;
             doubleLists["ListOfnu"] = ListOfnu;
-            // H = −0.06766x^2 + 0.90276x + 52.44933
-            // КПД = −0.00363x^3 + 0.01554x^2 + 3.96383x − 1.98288
         }
 
         private void culcButton_Click(object sender, EventArgs e)
@@ -118,12 +116,11 @@ namespace Расчёт_нагнетательной_турбомашины
 
 
             List<double> ListOfHc = new List<double>();
-
             foreach (int i in ListOfQ_long)
                 ListOfHc.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2);
             doubleLists["ListOfHc"] = ListOfHc;
 
-            List<double[]> H_Hc_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc, true);
+            List<double[]> H_Hc_crossPoint_list = getCrossingListsPoint(ListOfH, ListOfHc, true);
             double[] H_Hc_crossPoint = H_Hc_crossPoint_list[0];
             double[] H_Hc_nu_point = H_Hc_crossPoint_list[1];
             doubleArrays["H_Hc_crossPoint"] = H_Hc_crossPoint;
@@ -196,7 +193,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 ListOfH3pod.Add(H3pod_ * Math.Pow(i, 2));
             doubleLists["ListOfH3pod"] = ListOfH3pod;
 
-            List<double[]> H_H3pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH3pod, true);
+            List<double[]> H_H3pod_crossPoint_list = getCrossingListsPoint(ListOfH, ListOfH3pod, true);
             double[] H_H3pod_crossPoint = H_H3pod_crossPoint_list[0];
             double[] H_H3pod_nu_point = H_H3pod_crossPoint_list[1];
             doubleArrays["H_H3pod_crossPoint"] = H_H3pod_crossPoint;
@@ -220,7 +217,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 ListOfHc_.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2_);
             doubleLists["ListOfHc_"] = ListOfHc_;
 
-            List<double[]> H_Hc__crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfHc_, true);
+            List<double[]> H_Hc__crossPoint_list = getCrossingListsPoint(ListOfH, ListOfHc_, true);
             double[] H_Hc__crossPoint = H_Hc__crossPoint_list[0];
             double[] H_Hc__nu_point = H_Hc__crossPoint_list[1];
             doubleArrays["H_Hc__crossPoint"] = H_Hc__crossPoint;
@@ -260,7 +257,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 ListOfH5pod.Add(H5pod_ * Math.Pow(i, 2));
             doubleLists["ListOfH5pod"] = ListOfH5pod;
 
-            List<double[]> H_H5pod_crossPoint_list = getCrossingLinesPoint(ListOfH, ListOfH5pod, true);
+            List<double[]> H_H5pod_crossPoint_list = getCrossingListsPoint(ListOfH, ListOfH5pod, true);
             double[] H_H5pod_crossPoint = H_H5pod_crossPoint_list[0];
             double[] H_H5pod_nu_point = H_H5pod_crossPoint_list[1];
             doubleArrays["H_H5pod_crossPoint"] = H_H5pod_crossPoint;
@@ -280,7 +277,7 @@ namespace Расчёт_нагнетательной_турбомашины
             #endregion
 
             #region Пункт 6
-            double n6 = n * (1 - alpha);
+            double n6 = n * (1 - (double) alpha / 100);
             Tuple<double, double> firstPoint = null;
             Tuple<double, double> secondPoint = null;
 
@@ -310,28 +307,63 @@ namespace Расчёт_нагнетательной_турбомашины
                 }
             }
 
-            List<double[]> KPD_crossPoint_list = getCrossingLinesPoint(
+            List<double[]> KPD_1crossPoint_list = getCrossingListsPoint(
+                new List<double>() { firstPoint.Item1, firstPoint.Item2 },
+                new List<double>() {  KPD, KPD },
+                false,
                 ListOfnu,
-                new List<double>() { KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD, KPD },
-                false);
-            double[] KPD_crossPoint = KPD_crossPoint_list[0];
-            double[] KPD_nu_crossPoint = KPD_crossPoint_list[1];
-            doubleArrays["KPD_crossPoint"] = KPD_crossPoint;
-            doubleArrays["KPD_nu_crossPoint"] = KPD_nu_crossPoint;
+                ListOfH);
+            double[] KPD_H_1crossPoint = KPD_1crossPoint_list[1];
+            doubleArrays["KPD_1crossPoint"] = KPD_1crossPoint_list[0];
+            doubleArrays["KPD_H_1crossPoint"] = KPD_H_1crossPoint;
 
+            List<double[]> KPD_2crossPoint_list = getCrossingListsPoint(
+                new List<double>() { secondPoint.Item1, secondPoint.Item2 },
+                new List<double>() { KPD, KPD },
+                false,
+                ListOfnu,
+                ListOfH);
+            double[] KPD_H_2crossPoint = KPD_2crossPoint_list[1];
+            doubleArrays["KPD_2crossPoint"] = KPD_2crossPoint_list[0];
+            doubleArrays["KPD_H_2crossPoint"] = KPD_H_2crossPoint;
 
+            double HA = KPD_H_1crossPoint[1];
+            double QA = KPD_H_1crossPoint[0];
+            double HApod = HA / Math.Pow(QA, 2);
+            List<double> ListOfHApod = new List<double>();
+            foreach (int i in ListOfQ_long)
+                ListOfHApod.Add(Math.Pow(i, 2) * HApod);
+            doubleLists["ListOfHApod"] = ListOfHApod;
+
+            double HB = KPD_H_2crossPoint[1];
+            double QB = KPD_H_2crossPoint[0];
+            double HBpod = HB / Math.Pow(QB, 2);
+            List<double> ListOfHBpod = new List<double>();
+            foreach (int i in ListOfQ_long)
+                ListOfHBpod.Add(Math.Pow(i, 2) * HBpod);
+            doubleLists["ListOfHBpod"] = ListOfHBpod;
+
+            double Q6 = QA * n6 / n;
+            double Q6_ = QB * n6 / n;
+            double H6 = HA * Math.Pow(Q6 / QA, 2);
+            double H6_ = HB * Math.Pow(Q6_ / QB, 2);
+            doubleArrays["point6"] = new double[] { Q6, H6 };
+            doubleArrays["point6_"] = new double[] { Q6_, H6_ };
+
+            Q6Box.Text = Q6.ToString();
+            Q6_Box.Text = Q6_.ToString();
+            H6Box.Text = H6.ToString();
+            H6_Box.Text = H6_.ToString();
             #endregion
 
             #region Пункт 7
-            double nuMax = ListOfnu.Max();
-            int nuMaxIndex = ListOfnu.IndexOf(nuMax);
-            int qOfNuMax = ListOfQ[nuMaxIndex];
-            double[] nuMaxPoint = new double[] { qOfNuMax, nuMax};
-            double[] HOfNuMaxPoint = new double[] { qOfNuMax, ListOfH[nuMaxIndex]};
-            doubleArrays["nuMaxPoint"] = nuMaxPoint;
-            doubleArrays["HOfNuMaxPoint"] = HOfNuMaxPoint;
+            double H7 = ListOfnu.Max();
+            int nuMaxIndex = ListOfnu.IndexOf(H7);
+            int Q7 = ListOfQ[nuMaxIndex];
+            doubleArrays["H7Point"] = new double[] { Q7, H7 };
+            doubleArrays["H7_Point"] = new double[] { Q7, ListOfH[nuMaxIndex] };
 
-            double Hct = ListOfH[nuMaxIndex] - H_c2 * 0.000001 * Math.Pow(qOfNuMax, 2);
+            double Hct = ListOfH[nuMaxIndex] - H_c2 * 0.000001 * Math.Pow(Q7, 2);
             double hvs_hn = Hct - p_2 / (p * g);
             List<double> ListOfH_c = new List<double>();
             foreach (int i in ListOfQ_long)
@@ -340,9 +372,39 @@ namespace Расчёт_нагнетательной_турбомашины
 
             hvs_hnBox.Text = hvs_hn.ToString();
             #endregion
+
+            #region Пункт 8
+            double H8 = ListOfH[nuMaxIndex];
+            int Q8 = Q7;
+            double H8pod = H8 / Math.Pow(Q8, 2);
+            doubleArrays["H8Point"] = new double[] { Q8, ListOfnu.Max() };
+            doubleArrays["H8_Point"] = new double[] { Q8, H8 };
+
+            List<double> ListOfH8pod = new List<double>();
+            foreach (int i in ListOfQ_long)
+                ListOfH8pod.Add(Math.Pow(i, 2) * H8pod);
+            doubleLists["ListOfH8pod"] = ListOfH8pod;
+
+            List<double[]> Hc_H8pod_crossPoint_list = getCrossingListsPoint(ListOfHc, ListOfH8pod, false, ListOfHc, null);
+            double[] Hc_H8pod_crossPoint = Hc_H8pod_crossPoint_list[0];
+            doubleArrays["Hc_H8pod_crossPoint"] = Hc_H8pod_crossPoint;
+
+            double n8_ = Math.Round(n * Hc_H8pod_crossPoint[0] / Q8);
+            n8_Box.Text = n8_.ToString();
+            #endregion
+
+            #region Пункт 9
+            double ns = Math.Round(3.65 * n * Math.Sqrt(Q2 * 0.001) / Math.Pow(Math.Pow(H2, 3), 1.0 / 4), 1);
+
+            nsBox.Text = ns.ToString();
+            #endregion
+        }
+        private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList)
+        {
+            return getCrossingListsPoint(smallList, list, longList, null, ListOfnu);
         }
 
-        private List<double[]> getCrossingLinesPoint(List<double> smallList, List<double> list, bool longList)
+        private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList, List<double> crossLinesList, List<double> insteadOfNuList)
         {
             // Расчёт точки пересечения
             int maxIndex = 0, max2Index = 0;
@@ -364,7 +426,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 }
                 else
                 {
-                    if (temp < max2)
+                    if ((temp < max2) && (Math.Abs(maxIndex - i) == 1))
                     {
                         max2 = temp;
                         max2Index = i;
@@ -372,15 +434,28 @@ namespace Расчёт_нагнетательной_турбомашины
                 }
             }
 
+            int q1Index = maxIndex;
+            int q2Index = max2Index;
+            if (crossLinesList != null)
+            {
+                q1Index = crossLinesList.IndexOf(smallList[maxIndex]);
+                q2Index = crossLinesList.IndexOf(smallList[max2Index]);
+                if ((smallList.Count == list.Count) && smallList.Count > ListOfQ.Count)
+                {
+                    q1Index -= 8;
+                    q2Index -= 8;
+                }
+            }
+
             double y1_H = smallList[maxIndex], y2_H = smallList[max2Index];
-            double x1_H = ListOfQ[maxIndex], x2_H = ListOfQ[max2Index];
-            double x_H = Math.Round(y1_H - y2_H, 10);
+            double x1_H = ListOfQ[q1Index], x2_H = ListOfQ[q2Index];
+            double x_H = y1_H - y2_H;
             double y_H = x2_H - x1_H;
             double C_H = -(x1_H * y2_H - x2_H * y1_H);
 
             double y1_Hc = list[maxIndex + longInt], y2_Hc = list[max2Index + longInt];
-            double x1_Hc = ListOfQ[maxIndex], x2_Hc = ListOfQ[max2Index];
-            double x_Hc = Math.Round(y1_Hc - y2_Hc, 10);
+            double x1_Hc = ListOfQ[q1Index], x2_Hc = ListOfQ[q2Index];
+            double x_Hc = y1_Hc - y2_Hc;
             double y_Hc = x2_Hc - x1_Hc;
             double C_Hc = -(x1_Hc * y2_Hc - x2_Hc * y1_Hc);
 
@@ -393,32 +468,44 @@ namespace Расчёт_нагнетательной_турбомашины
             LinearSystem system = new LinearSystem(matrix, vector);
             vector = system.XVector;
 
-            double y1_p = vector[1], y2_p = Math.Max(ListOfnu[maxIndex], ListOfnu[max2Index]);
-            double x1_p = vector[0], x2_p = x1_p;
-            double x_p = Math.Round(y1_p - y2_p, 10);
-            double y_p = 0;
-            double C_p = -(x1_p * y2_p - x2_p * y1_p);
-
-            double y1_n = ListOfnu[maxIndex], y2_n = ListOfnu[max2Index];
-            double x1_n = ListOfQ[maxIndex], x2_n = ListOfQ[max2Index];
-            double x_n = Math.Round(y1_n - y2_n, 10);
-            double y_n = x2_n - x1_n;
-            double C_n = -(x1_n * y2_n - x2_n * y1_n);
-
-            double[,] matrix2 = new double[2, 2];
-            matrix2[0, 0] = x_p; matrix2[0, 1] = y_p;
-            matrix2[1, 0] = x_n; matrix2[1, 1] = y_n;
-            double[] vector2 = new double[2];
-            vector2[0] = C_p; vector2[1] = C_n;
-
-            LinearSystem system2 = new LinearSystem(matrix2, vector2);
-            vector2 = system2.XVector;
-
-            return new List<double[]>
+            if (insteadOfNuList != null)
             {
-                vector,
-                vector2
-            };
+                int nu1Index = q1Index;
+                int nu2Index = q2Index;
+                if (insteadOfNuList.Count > ListOfnu.Count)
+                {
+                    nu1Index += 8;
+                    nu2Index += 8;
+                }
+                    
+                double y1_p = vector[1], y2_p = Math.Max(insteadOfNuList[nu1Index], insteadOfNuList[nu2Index]);
+                double x1_p = vector[0], x2_p = x1_p;
+                double x_p = y1_p - y2_p;
+                double y_p = 0;
+                double C_p = -(x1_p * y2_p - x2_p * y1_p);
+
+                double y1_n = insteadOfNuList[nu1Index], y2_n = insteadOfNuList[nu2Index];
+                double x1_n = ListOfQ[q1Index], x2_n = ListOfQ[q2Index];
+                double x_n = y1_n - y2_n;
+                double y_n = x2_n - x1_n;
+                double C_n = -(x1_n * y2_n - x2_n * y1_n);
+
+                double[,] matrix2 = new double[2, 2];
+                matrix2[0, 0] = x_p; matrix2[0, 1] = y_p;
+                matrix2[1, 0] = x_n; matrix2[1, 1] = y_n;
+                double[] vector2 = new double[2];
+                vector2[0] = C_p; vector2[1] = C_n;
+
+                LinearSystem system2 = new LinearSystem(matrix2, vector2);
+                vector2 = system2.XVector;
+
+                return new List<double[]>
+                {
+                    vector,
+                    vector2
+                };
+            }
+            return new List<double[]> { vector };
         }
 
         private int getInt(string column)

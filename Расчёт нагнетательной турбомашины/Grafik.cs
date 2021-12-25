@@ -62,7 +62,7 @@ namespace Расчёт_нагнетательной_турбомашины
                     H_Hc_linePairList.Add(H_Hc_crossPoint[0], H_Hc_crossPoint[1]);
                     H_Hc_linePairList.Add(H_Hc_nu_point[0], H_Hc_nu_point[1]);
 
-                    MyPane.AddCurve("", H_Hc_linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, H_Hc_linePairList, Color.Black, SymbolType.Circle);
                     break;
                 case 3:
                     PointPairList H3podPairList = new PointPairList();
@@ -81,8 +81,8 @@ namespace Расчёт_нагнетательной_турбомашины
                     H_H3pod_nu_linePairList.Add(H_H3pod_nu_point[0], H_H3pod_nu_point[1]);
 
                     MyPane.AddCurve("H3 под", H3podPairList, Color.RosyBrown, SymbolType.Diamond);
-                    MyPane.AddCurve("", Hc_0_3_linePairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H_H3pod_nu_linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, Hc_0_3_linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, H_H3pod_nu_linePairList, Color.Black, SymbolType.Circle);
                     break;
                 case 4:
                     PointPairList Hc__PairList = new PointPairList();
@@ -96,7 +96,7 @@ namespace Расчёт_нагнетательной_турбомашины
                     H_Hc__nu_linePairList.Add(H_Hc__nu_point[0], H_Hc__nu_point[1]);
 
                     MyPane.AddCurve("H'c", Hc__PairList, Color.RosyBrown, SymbolType.Diamond);
-                    MyPane.AddCurve("", H_Hc__nu_linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, H_Hc__nu_linePairList, Color.Black, SymbolType.Circle);
                     break;
                 case 5:
                     PointPairList H5podPairList = new PointPairList();
@@ -111,42 +111,97 @@ namespace Расчёт_нагнетательной_турбомашины
                         H5podPairList.Add(ListOfQ_long[i], ListOfH5pod[i]);
                     Hc_0_5_linePairList.Add(H51[0], H51[1]);
                     Hc_0_5_linePairList.Add(H52[0], H52[1]);
+                    Hc_0_5_linePairList.Add(0, H52[1]);
                     H_H5pod_nu_linePairList.Add(H_H5pod_crossPoint[0], H_H5pod_crossPoint[1]);
                     H_H5pod_nu_linePairList.Add(H_H5pod_nu_point[0], H_H5pod_nu_point[1]);
 
                     MyPane.AddCurve("H5 под", H5podPairList, Color.RosyBrown, SymbolType.Diamond);
-                    MyPane.AddCurve("", Hc_0_5_linePairList, Color.Black, SymbolType.Circle);
-                    MyPane.AddCurve("", H_H5pod_nu_linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, Hc_0_5_linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, H_H5pod_nu_linePairList, Color.Black, SymbolType.Circle);
                     break;
                 case 6:
-                    PointPairList KPD_linePairList = new PointPairList();
-                    PointPairList KPD_nu_linePairList = new PointPairList();
-                    double[] KPD_crossPoint = doubleArrays["KPD_crossPoint"];
-                    double[] KPD_nu_crossPoint = doubleArrays["KPD_nu_crossPoint"];
-                    KPD_linePairList.Add(KPD_crossPoint[0], KPD_crossPoint[1]);
-                    KPD_nu_linePairList.Add(KPD_nu_crossPoint[0], KPD_nu_crossPoint[1]);
+                    PointPairList KPD_H_1linePairList = new PointPairList();
+                    PointPairList KPD_H_2linePairList = new PointPairList();
+                    PointPairList HApodlinePairList = new PointPairList();
+                    PointPairList HBpodlinePairList = new PointPairList();
+                    PointPairList Point6PairList = new PointPairList();
+                    PointPairList Point6_PairList = new PointPairList();
+                    double[] KPD_1crossPoint = doubleArrays["KPD_1crossPoint"];
+                    double[] KPD_H_1crossPoint = doubleArrays["KPD_H_1crossPoint"];
+                    double[] KPD_2crossPoint = doubleArrays["KPD_2crossPoint"];
+                    double[] KPD_H_2crossPoint = doubleArrays["KPD_H_2crossPoint"];
+                    List<double> ListOfHApod = doubleLists["ListOfHApod"];
+                    List<double> ListOfHBpod = doubleLists["ListOfHBpod"];
+                    double[] point6 = doubleArrays["point6"];
+                    double[] point6_ = doubleArrays["point6_"];
+                    KPD_H_1linePairList.Add(KPD_1crossPoint[0], KPD_1crossPoint[1]);
+                    KPD_H_1linePairList.Add(KPD_H_1crossPoint[0], KPD_H_1crossPoint[1]);
+                    KPD_H_2linePairList.Add(KPD_2crossPoint[0], KPD_2crossPoint[1]);
+                    KPD_H_2linePairList.Add(KPD_H_2crossPoint[0], KPD_H_2crossPoint[1]);
+                    for (int i = 0; i < 15; i++)
+                        HApodlinePairList.Add(ListOfQ_long[i], ListOfHApod[i]);
+                    for (int i = 0; i < ListOfQ_long.Count; i++)
+                        HBpodlinePairList.Add(ListOfQ_long[i], ListOfHBpod[i]);
+                    Point6PairList.Add(point6[0], 0);
+                    Point6PairList.Add(point6[0], point6[1]);
+                    Point6PairList.Add(0, point6[1]);
+                    Point6_PairList.Add(point6_[0], 0);
+                    Point6_PairList.Add(point6_[0], point6_[1]);
+                    Point6_PairList.Add(0, point6_[1]);
 
-                    MyPane.AddCurve("", KPD_linePairList, Color.RosyBrown, SymbolType.Diamond);
-                    MyPane.AddCurve("", KPD_nu_linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, KPD_H_1linePairList, Color.Black, SymbolType.Circle);
+                    addDottedLine(MyPane, KPD_H_2linePairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("HA под", HApodlinePairList, Color.DarkGray, SymbolType.Plus);
+                    MyPane.AddCurve("HB под", HBpodlinePairList, Color.DarkOrange, SymbolType.XCross);
+                    addDottedLine(MyPane, Point6PairList, Color.Brown, SymbolType.Diamond);
+                    addDottedLine(MyPane, Point6_PairList, Color.Brown, SymbolType.Diamond);
                     break;
                 case 7:
-                    PointPairList nuMaxPointPairList = new PointPairList();
+                    PointPairList H7PointPairList = new PointPairList();
                     PointPairList H_cPairList = new PointPairList();
-                    double[] nuMaxPoint = doubleArrays["nuMaxPoint"];
-                    double[] HOfNuMaxPoint = doubleArrays["HOfNuMaxPoint"];
+                    double[] H7Point = doubleArrays["H7Point"];
+                    double[] H7_Point = doubleArrays["H7_Point"];
                     List<double> ListOfH_c = doubleLists["ListOfH_c"];
-                    nuMaxPointPairList.Add(nuMaxPoint[0], nuMaxPoint[1]);
-                    nuMaxPointPairList.Add(HOfNuMaxPoint[0], HOfNuMaxPoint[1]);
+                    H7PointPairList.Add(H7Point[0], H7Point[1]);
+                    H7PointPairList.Add(H7_Point[0], H7_Point[1]);
                     for (int i = 0; i < ListOfQ_long.Count; i++)
                         H_cPairList.Add(ListOfQ_long[i], ListOfH_c[i]);
 
+                    addDottedLine(MyPane, H7PointPairList, Color.Black, SymbolType.Circle);
                     MyPane.AddCurve("H'c", H_cPairList, Color.Brown, SymbolType.Diamond);
-                    MyPane.AddCurve("", nuMaxPointPairList, Color.Black, SymbolType.Circle);
+                    break;
+                case 8:
+                    PointPairList H8PointPairList = new PointPairList();
+                    PointPairList H8podPairList = new PointPairList();
+                    PointPairList Hc_H8pod_linePairList = new PointPairList();
+                    double[] H8Point = doubleArrays["H8Point"];
+                    double[] H8_Point = doubleArrays["H8_Point"];
+                    double[] Hc_H8pod_crossPoint = doubleArrays["Hc_H8pod_crossPoint"];
+                    List<double> ListOfH8pod = doubleLists["ListOfH8pod"];
+                    H8PointPairList.Add(H8Point[0], H8Point[1]);
+                    H8PointPairList.Add(H8_Point[0], H8_Point[1]);
+                    for (int i = 0; i < 30; i++)
+                        H8podPairList.Add(ListOfQ_long[i], ListOfH8pod[i]);
+                    Hc_H8pod_linePairList.Add(Hc_H8pod_crossPoint[0], Hc_H8pod_crossPoint[1]);
+
+                    addDottedLine(MyPane, H8PointPairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("H8 под", H8podPairList, Color.Brown, SymbolType.Diamond);
+                    addDottedLine(MyPane, Hc_H8pod_linePairList, Color.Black, SymbolType.Circle);
                     break;
             }
 
             MyGraph.AxisChange();
             MyGraph.Invalidate();
+        }
+
+        private void addDottedLine(GraphPane pane, PointPairList pointPairList, Color color, SymbolType symbolType)
+        {
+            LineItem line = pane.AddCurve("", pointPairList, color, symbolType);
+            line.Line.Style = System.Drawing.Drawing2D.DashStyle.Custom;
+            // Длина пунктира
+            line.Line.DashOn = 7.0f;
+            // Длина пропуска между пунктирами
+            line.Line.DashOff = 8.0f;
         }
 
         private void MyGraph_MouseMove(object sender, MouseEventArgs e)
