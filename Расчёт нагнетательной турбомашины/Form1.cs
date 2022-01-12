@@ -398,6 +398,68 @@ namespace Расчёт_нагнетательной_турбомашины
 
             nsBox.Text = ns.ToString();
             #endregion
+
+            #region Пункт 10
+            // Расчёт экономических параметров
+            const double alphaV = 0.68;
+            double nuV = 1 / (1 + alphaV * Math.Pow(ns, -0.66));
+            double D1n = 4.25 * Math.Pow(Q2 * 0.001 / n, 1 / 3.0);
+            double nuGidr = 1 - (0.42 / Math.Pow(Math.Log(D1n) - 0.172, 2));
+            double nuMech = 0.93;
+            double nu = nuV * nuGidr * nuMech;
+            double N = p * g * Q2 * 0.000001 * H2 / nu;
+            double Mkr = N * 30 * 1000 / (pi * n);
+
+            nuVBox.Text = nuV.ToString();
+            D1nBox.Text = D1n.ToString();
+            nuGidrBox.Text = nuGidr.ToString();
+            nuBox.Text = nu.ToString();
+            N_Box.Text = N.ToString();
+            MkrBox.Text = Mkr.ToString();
+
+            // Расчёт кинематических и геометрических параметров
+            double tdop = 150;
+            double dv = Math.Pow(Mkr / (0.2 * tdop * g * 10000), 1 / 3.0);
+            double dst = 1.3 * dv;
+            double D0 = Math.Sqrt(Math.Pow(D1n, 2) + Math.Pow(dst, 2)) * 1000;
+            double D1 = (D0 + 20) / 1000;
+            double lst = 1.4 * dst;
+            double u1 = pi * D1 * n / 60;
+            double c0 = 4 * Q2 * 0.001 / (nuV * pi * (Math.Pow(D1, 2) - Math.Pow(dst, 2)));
+            double c1 = c0;
+            double B1 = Math.Atan(c1 / u1) * 180 / pi;
+            double i_ = 4;
+            double B1l = B1 + i_;
+            double uu1 = 0.9;
+            double b1 = Q2 * 0.001 / (nuV * pi * D1 * c1 * uu1);
+            double B2 = 17;
+            double oo = 3;
+            double B2l = B2 + oo;
+            double u2 = 0.5 * c1 * (Math.Cos(B2l * pi / 180) / Math.Sin(B2l * pi / 180)) + Math.Sqrt(Math.Pow(c1 * (Math.Cos(B2l * pi / 180) / Math.Sin(B2l * pi / 180)) / 2, 2) + g * H2 / nuGidr);
+            double D2 = u2 / (pi * (n / 60));
+            double m = D2 / D1;
+            double b2 = b1 * D1 / D2;
+            double z = Math.Round(6.5 * ((m + 1) / (m - 1)) * Math.Sin((B1l + B2l) / 2 * (pi / 180)));
+
+            dvBox.Text = dv.ToString();
+            dstBox.Text = dst.ToString();
+            D0mBox.Text = (D0 / 1000).ToString();
+            D0mmBox.Text = D0.ToString();
+            D1mBox.Text = D1.ToString();
+            D1mmBox.Text = (D1 * 1000).ToString();
+            lstBox.Text = lst.ToString();
+            u1Box.Text = u1.ToString();
+            c0Box.Text = c0.ToString();
+            B1GradBox.Text = B1.ToString();
+            B1lBox.Text = B1l.ToString();
+            b1Box.Text = b1.ToString();
+            B2lBox.Text = B2l.ToString();
+            u2Box.Text = u2.ToString();
+            D2Box.Text = D2.ToString();
+            mBox.Text = m.ToString();
+            b2Box.Text = b2.ToString();
+            zBox.Text = z.ToString();
+            #endregion
         }
         private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList)
         {
@@ -557,6 +619,42 @@ namespace Расчёт_нагнетательной_турбомашины
             graphButton.Enabled = false;
             d_Label.Text = "d ≈";
             H_cLabel.Text = "H c =";
+        }
+
+        private void tabControl_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (tabControl.SelectedIndex == 9)
+            {
+                Width = 690;
+                Height = 677;
+
+                tabControl.Width = 655;
+                tabControl.Height = 259;
+
+                culcButton.Width = 321;
+                culcButton.Height = 131;
+                culcButton.Location = new Point(9, 498);
+
+                graphButton.Width = 321;
+                graphButton.Height = 131;
+                graphButton.Location = new Point(341, 498);
+            }
+            else
+            {
+                Width = 564;
+                Height = 550;
+
+                tabControl.Width = 530;
+                tabControl.Height = 181;
+
+                culcButton.Width = 259;
+                culcButton.Height = 82;
+                culcButton.Location = new Point(9, 420);
+
+                graphButton.Width = 259;
+                graphButton.Height = 82;
+                graphButton.Location = new Point(278, 420);
+            }
         }
     }
 }
