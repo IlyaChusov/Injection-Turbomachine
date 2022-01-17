@@ -60,6 +60,7 @@ namespace Расчёт_нагнетательной_турбомашины
             double n;
             int alpha;
             double KPD;
+            double pNas;
             try
             {
                 n = double.Parse(nBox.Text);
@@ -67,7 +68,8 @@ namespace Расчёт_нагнетательной_турбомашины
                 Q2 = double.Parse(Q2_TextBox.Text);
                 alpha = int.Parse(alphaBox.Text);
                 KPD = double.Parse(KPDBox.Text);
-                if (H2 == 0 || Q2 == 0 || H2 > 50 || Q2 > 50 || n == 0 || KPD == 0)
+                pNas = double.Parse(pNasBox.Text);
+                if (H2 == 0 || Q2 == 0 || H2 > 50 || Q2 > 50 || n == 0 || KPD == 0 || pNas == 0)
                     throw new Exception();
             }
             catch (Exception)
@@ -460,7 +462,22 @@ namespace Расчёт_нагнетательной_турбомашины
             b2Box.Text = b2.ToString();
             zBox.Text = z.ToString();
             #endregion
+
+            #region Пункт 11
+            double Hkav = (p_a * 1000 - pNas) / (p * g);
+            double Hkr_vs = Hkav - 10 * Math.Pow(n * Math.Sqrt(Q2 * 0.001) / C, 4 / 3.0);
+            double Hdop_vs = Hkr_vs - 0.25 * (Hkav - Hkr_vs);
+
+            HdopvsBox.Text = Hdop_vs.ToString();
+            #endregion
+
+            #region Пункт 12
+            double Q12 = Q1 / 2;
+            double H12 = H_c1 + Math.Pow(Q12 * Math.Pow(10, -3), 2) * H_c2;
+
+            #endregion
         }
+
         private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList)
         {
             return getCrossingListsPoint(smallList, list, longList, null, ListOfnu);
@@ -623,38 +640,38 @@ namespace Расчёт_нагнетательной_турбомашины
 
         private void tabControl_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            if (tabControl.SelectedIndex == 9)
-            {
-                Width = 690;
-                Height = 677;
+            //if (tabControl.SelectedIndex == 9)
+            //{
+            //    Width = 690;
+            //    Height = 677;
 
-                tabControl.Width = 655;
-                tabControl.Height = 259;
+            //    tabControl.Width = 655;
+            //    tabControl.Height = 259;
 
-                culcButton.Width = 321;
-                culcButton.Height = 131;
-                culcButton.Location = new Point(9, 498);
+            //    culcButton.Width = 321;
+            //    culcButton.Height = 131;
+            //    culcButton.Location = new Point(9, 498);
 
-                graphButton.Width = 321;
-                graphButton.Height = 131;
-                graphButton.Location = new Point(341, 498);
-            }
-            else
-            {
-                Width = 564;
-                Height = 550;
+            //    graphButton.Width = 321;
+            //    graphButton.Height = 131;
+            //    graphButton.Location = new Point(341, 498);
+            //}
+            //else
+            //{
+            //    Width = 564;
+            //    Height = 550;
 
-                tabControl.Width = 530;
-                tabControl.Height = 181;
+            //    tabControl.Width = 530;
+            //    tabControl.Height = 181;
 
-                culcButton.Width = 259;
-                culcButton.Height = 82;
-                culcButton.Location = new Point(9, 420);
+            //    culcButton.Width = 259;
+            //    culcButton.Height = 82;
+            //    culcButton.Location = new Point(9, 420);
 
-                graphButton.Width = 259;
-                graphButton.Height = 82;
-                graphButton.Location = new Point(278, 420);
-            }
+            //    graphButton.Width = 259;
+            //    graphButton.Height = 82;
+            //    graphButton.Location = new Point(278, 420);
+            //}
         }
     }
 }

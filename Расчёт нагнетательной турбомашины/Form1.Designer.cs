@@ -141,78 +141,86 @@
             this.nsBox = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
-            this.label60 = new System.Windows.Forms.Label();
-            this.KPDBox = new System.Windows.Forms.TextBox();
-            this.label61 = new System.Windows.Forms.Label();
             this.tab10 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label108 = new System.Windows.Forms.Label();
+            this.dvBox = new System.Windows.Forms.TextBox();
+            this.D0mBox = new System.Windows.Forms.TextBox();
+            this.zBox = new System.Windows.Forms.TextBox();
+            this.label81 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label82 = new System.Windows.Forms.Label();
+            this.D0mmBox = new System.Windows.Forms.TextBox();
+            this.label79 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label83 = new System.Windows.Forms.Label();
+            this.dstBox = new System.Windows.Forms.TextBox();
+            this.b2Box = new System.Windows.Forms.TextBox();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label80 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.D1mmBox = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.mBox = new System.Windows.Forms.TextBox();
+            this.label85 = new System.Windows.Forms.Label();
+            this.D1mBox = new System.Windows.Forms.TextBox();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.lstBox = new System.Windows.Forms.TextBox();
+            this.D2Box = new System.Windows.Forms.TextBox();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.u1Box = new System.Windows.Forms.TextBox();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.c0Box = new System.Windows.Forms.TextBox();
+            this.u2Box = new System.Windows.Forms.TextBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.B1GradBox = new System.Windows.Forms.TextBox();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.B1lBox = new System.Windows.Forms.TextBox();
+            this.B2lBox = new System.Windows.Forms.TextBox();
+            this.label95 = new System.Windows.Forms.Label();
+            this.b1Box = new System.Windows.Forms.TextBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label97 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.nuVBox = new System.Windows.Forms.TextBox();
-            this.label68 = new System.Windows.Forms.Label();
-            this.D1nBox = new System.Windows.Forms.TextBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.nuGidrBox = new System.Windows.Forms.TextBox();
-            this.label71 = new System.Windows.Forms.Label();
-            this.nuBox = new System.Windows.Forms.TextBox();
-            this.label72 = new System.Windows.Forms.Label();
-            this.N_Box = new System.Windows.Forms.TextBox();
-            this.label73 = new System.Windows.Forms.Label();
-            this.label74 = new System.Windows.Forms.Label();
             this.MkrBox = new System.Windows.Forms.TextBox();
             this.label75 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
-            this.dvBox = new System.Windows.Forms.TextBox();
-            this.label77 = new System.Windows.Forms.Label();
+            this.N_Box = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.nuBox = new System.Windows.Forms.TextBox();
+            this.label72 = new System.Windows.Forms.Label();
+            this.nuGidrBox = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
-            this.label79 = new System.Windows.Forms.Label();
-            this.dstBox = new System.Windows.Forms.TextBox();
-            this.label80 = new System.Windows.Forms.Label();
-            this.label81 = new System.Windows.Forms.Label();
-            this.D0mBox = new System.Windows.Forms.TextBox();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
-            this.D0mmBox = new System.Windows.Forms.TextBox();
-            this.label84 = new System.Windows.Forms.Label();
-            this.D1mBox = new System.Windows.Forms.TextBox();
-            this.label85 = new System.Windows.Forms.Label();
-            this.D1mmBox = new System.Windows.Forms.TextBox();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.lstBox = new System.Windows.Forms.TextBox();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.u1Box = new System.Windows.Forms.TextBox();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
-            this.c0Box = new System.Windows.Forms.TextBox();
-            this.label92 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.B1GradBox = new System.Windows.Forms.TextBox();
-            this.label94 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
-            this.B1lBox = new System.Windows.Forms.TextBox();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label97 = new System.Windows.Forms.Label();
-            this.b1Box = new System.Windows.Forms.TextBox();
-            this.label98 = new System.Windows.Forms.Label();
-            this.label99 = new System.Windows.Forms.Label();
-            this.B2lBox = new System.Windows.Forms.TextBox();
-            this.label100 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.u2Box = new System.Windows.Forms.TextBox();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
-            this.D2Box = new System.Windows.Forms.TextBox();
-            this.label104 = new System.Windows.Forms.Label();
-            this.mBox = new System.Windows.Forms.TextBox();
-            this.label106 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
-            this.b2Box = new System.Windows.Forms.TextBox();
-            this.label107 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
-            this.zBox = new System.Windows.Forms.TextBox();
-            this.label109 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.D1nBox = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.KPDBox = new System.Windows.Forms.TextBox();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label110 = new System.Windows.Forms.Label();
+            this.pNasBox = new System.Windows.Forms.TextBox();
+            this.label111 = new System.Windows.Forms.Label();
+            this.tab11 = new System.Windows.Forms.TabPage();
+            this.HdopvsBox = new System.Windows.Forms.TextBox();
+            this.label112 = new System.Windows.Forms.Label();
+            this.label113 = new System.Windows.Forms.Label();
+            this.tab12 = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tab2.SuspendLayout();
@@ -224,8 +232,9 @@
             this.tab8.SuspendLayout();
             this.tab9.SuspendLayout();
             this.tab10.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tab11.SuspendLayout();
             this.SuspendLayout();
             // 
             // variantBox
@@ -371,7 +380,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 211);
+            this.label4.Location = new System.Drawing.Point(9, 182);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 13);
@@ -380,7 +389,7 @@
             // 
             // alphaBox
             // 
-            this.alphaBox.Location = new System.Drawing.Point(55, 209);
+            this.alphaBox.Location = new System.Drawing.Point(55, 180);
             this.alphaBox.Margin = new System.Windows.Forms.Padding(2);
             this.alphaBox.Name = "alphaBox";
             this.alphaBox.Size = new System.Drawing.Size(50, 20);
@@ -410,7 +419,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(109, 212);
+            this.label6.Location = new System.Drawing.Point(109, 183);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(15, 13);
@@ -432,7 +441,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(215, 211);
+            this.label8.Location = new System.Drawing.Point(215, 182);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 13);
@@ -441,7 +450,7 @@
             // 
             // nBox
             // 
-            this.nBox.Location = new System.Drawing.Point(160, 209);
+            this.nBox.Location = new System.Drawing.Point(160, 180);
             this.nBox.Margin = new System.Windows.Forms.Padding(2);
             this.nBox.Name = "nBox";
             this.nBox.Size = new System.Drawing.Size(50, 20);
@@ -451,7 +460,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(134, 212);
+            this.label13.Location = new System.Drawing.Point(134, 183);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(22, 13);
@@ -470,10 +479,12 @@
             this.tabControl.Controls.Add(this.tab8);
             this.tabControl.Controls.Add(this.tab9);
             this.tabControl.Controls.Add(this.tab10);
+            this.tabControl.Controls.Add(this.tab11);
+            this.tabControl.Controls.Add(this.tab12);
             this.tabControl.Location = new System.Drawing.Point(9, 234);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(530, 181);
+            this.tabControl.Size = new System.Drawing.Size(681, 181);
             this.tabControl.TabIndex = 19;
             this.tabControl.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl_Selecting);
             // 
@@ -497,7 +508,7 @@
             this.tab1.Location = new System.Drawing.Point(4, 22);
             this.tab1.Name = "tab1";
             this.tab1.Padding = new System.Windows.Forms.Padding(3);
-            this.tab1.Size = new System.Drawing.Size(522, 155);
+            this.tab1.Size = new System.Drawing.Size(673, 155);
             this.tab1.TabIndex = 0;
             this.tab1.Text = "Пункт 1";
             this.tab1.UseVisualStyleBackColor = true;
@@ -628,7 +639,7 @@
             this.tab2.Location = new System.Drawing.Point(4, 22);
             this.tab2.Name = "tab2";
             this.tab2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2.Size = new System.Drawing.Size(522, 155);
+            this.tab2.Size = new System.Drawing.Size(673, 155);
             this.tab2.TabIndex = 1;
             this.tab2.Text = "Пункт 2";
             this.tab2.UseVisualStyleBackColor = true;
@@ -656,7 +667,7 @@
             this.tab3.Location = new System.Drawing.Point(4, 22);
             this.tab3.Name = "tab3";
             this.tab3.Padding = new System.Windows.Forms.Padding(3);
-            this.tab3.Size = new System.Drawing.Size(522, 155);
+            this.tab3.Size = new System.Drawing.Size(673, 155);
             this.tab3.TabIndex = 2;
             this.tab3.Text = "Пункт 3";
             this.tab3.UseVisualStyleBackColor = true;
@@ -861,7 +872,7 @@
             this.tab4.Location = new System.Drawing.Point(4, 22);
             this.tab4.Name = "tab4";
             this.tab4.Padding = new System.Windows.Forms.Padding(3);
-            this.tab4.Size = new System.Drawing.Size(522, 155);
+            this.tab4.Size = new System.Drawing.Size(673, 155);
             this.tab4.TabIndex = 3;
             this.tab4.Text = "Пункт 4";
             this.tab4.UseVisualStyleBackColor = true;
@@ -1039,7 +1050,7 @@
             this.tab5.Location = new System.Drawing.Point(4, 22);
             this.tab5.Name = "tab5";
             this.tab5.Padding = new System.Windows.Forms.Padding(3);
-            this.tab5.Size = new System.Drawing.Size(522, 155);
+            this.tab5.Size = new System.Drawing.Size(673, 155);
             this.tab5.TabIndex = 4;
             this.tab5.Text = "Пункт 5";
             this.tab5.UseVisualStyleBackColor = true;
@@ -1241,7 +1252,7 @@
             this.tab6.Location = new System.Drawing.Point(4, 22);
             this.tab6.Name = "tab6";
             this.tab6.Padding = new System.Windows.Forms.Padding(3);
-            this.tab6.Size = new System.Drawing.Size(522, 155);
+            this.tab6.Size = new System.Drawing.Size(673, 155);
             this.tab6.TabIndex = 5;
             this.tab6.Text = "Пункт 6";
             this.tab6.UseVisualStyleBackColor = true;
@@ -1373,7 +1384,7 @@
             this.tab7.Controls.Add(this.label63);
             this.tab7.Location = new System.Drawing.Point(4, 22);
             this.tab7.Name = "tab7";
-            this.tab7.Size = new System.Drawing.Size(522, 155);
+            this.tab7.Size = new System.Drawing.Size(673, 155);
             this.tab7.TabIndex = 6;
             this.tab7.Text = "Пункт 7";
             this.tab7.UseVisualStyleBackColor = true;
@@ -1415,7 +1426,7 @@
             this.tab8.Controls.Add(this.label65);
             this.tab8.Location = new System.Drawing.Point(4, 22);
             this.tab8.Name = "tab8";
-            this.tab8.Size = new System.Drawing.Size(522, 155);
+            this.tab8.Size = new System.Drawing.Size(673, 155);
             this.tab8.TabIndex = 7;
             this.tab8.Text = "Пункт 8";
             this.tab8.UseVisualStyleBackColor = true;
@@ -1457,7 +1468,7 @@
             this.tab9.Controls.Add(this.label67);
             this.tab9.Location = new System.Drawing.Point(4, 22);
             this.tab9.Name = "tab9";
-            this.tab9.Size = new System.Drawing.Size(522, 155);
+            this.tab9.Size = new System.Drawing.Size(673, 155);
             this.tab9.TabIndex = 8;
             this.tab9.Text = "Пункт 9";
             this.tab9.UseVisualStyleBackColor = true;
@@ -1492,726 +1503,16 @@
             this.label67.TabIndex = 48;
             this.label67.Text = "об/мин";
             // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label60.Location = new System.Drawing.Point(392, 211);
-            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(15, 13);
-            this.label60.TabIndex = 22;
-            this.label60.Text = "%";
-            // 
-            // KPDBox
-            // 
-            this.KPDBox.Location = new System.Drawing.Point(338, 208);
-            this.KPDBox.Margin = new System.Windows.Forms.Padding(2);
-            this.KPDBox.Name = "KPDBox";
-            this.KPDBox.Size = new System.Drawing.Size(50, 20);
-            this.KPDBox.TabIndex = 21;
-            this.KPDBox.Text = "40";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Location = new System.Drawing.Point(272, 212);
-            this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(62, 13);
-            this.label61.TabIndex = 20;
-            this.label61.Text = "КПД выше";
-            // 
             // tab10
             // 
             this.tab10.Controls.Add(this.groupBox2);
             this.tab10.Controls.Add(this.groupBox1);
             this.tab10.Location = new System.Drawing.Point(4, 22);
             this.tab10.Name = "tab10";
-            this.tab10.Size = new System.Drawing.Size(522, 155);
+            this.tab10.Size = new System.Drawing.Size(673, 155);
             this.tab10.TabIndex = 9;
             this.tab10.Text = "Пункт 10";
             this.tab10.UseVisualStyleBackColor = true;
-            // 
-            // nuVBox
-            // 
-            this.nuVBox.Location = new System.Drawing.Point(53, 21);
-            this.nuVBox.Margin = new System.Windows.Forms.Padding(2);
-            this.nuVBox.Name = "nuVBox";
-            this.nuVBox.ReadOnly = true;
-            this.nuVBox.Size = new System.Drawing.Size(114, 20);
-            this.nuVBox.TabIndex = 23;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Location = new System.Drawing.Point(11, 24);
-            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(38, 13);
-            this.label68.TabIndex = 22;
-            this.label68.Text = "nu V =";
-            // 
-            // D1nBox
-            // 
-            this.D1nBox.Location = new System.Drawing.Point(53, 45);
-            this.D1nBox.Margin = new System.Windows.Forms.Padding(2);
-            this.D1nBox.Name = "D1nBox";
-            this.D1nBox.ReadOnly = true;
-            this.D1nBox.Size = new System.Drawing.Size(114, 20);
-            this.D1nBox.TabIndex = 25;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Location = new System.Drawing.Point(10, 48);
-            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(39, 13);
-            this.label69.TabIndex = 24;
-            this.label69.Text = "D 1n =";
-            // 
-            // nuGidrBox
-            // 
-            this.nuGidrBox.Location = new System.Drawing.Point(69, 69);
-            this.nuGidrBox.Margin = new System.Windows.Forms.Padding(2);
-            this.nuGidrBox.Name = "nuGidrBox";
-            this.nuGidrBox.ReadOnly = true;
-            this.nuGidrBox.Size = new System.Drawing.Size(98, 20);
-            this.nuGidrBox.TabIndex = 48;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(11, 72);
-            this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(54, 13);
-            this.label71.TabIndex = 47;
-            this.label71.Text = "nu гидр =";
-            // 
-            // nuBox
-            // 
-            this.nuBox.Location = new System.Drawing.Point(53, 93);
-            this.nuBox.Margin = new System.Windows.Forms.Padding(2);
-            this.nuBox.Name = "nuBox";
-            this.nuBox.ReadOnly = true;
-            this.nuBox.Size = new System.Drawing.Size(114, 20);
-            this.nuBox.TabIndex = 50;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Location = new System.Drawing.Point(21, 96);
-            this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(28, 13);
-            this.label72.TabIndex = 49;
-            this.label72.Text = "nu =";
-            // 
-            // N_Box
-            // 
-            this.N_Box.Location = new System.Drawing.Point(53, 117);
-            this.N_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.N_Box.Name = "N_Box";
-            this.N_Box.ReadOnly = true;
-            this.N_Box.Size = new System.Drawing.Size(114, 20);
-            this.N_Box.TabIndex = 52;
-            // 
-            // label73
-            // 
-            this.label73.AutoSize = true;
-            this.label73.Location = new System.Drawing.Point(25, 120);
-            this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(24, 13);
-            this.label73.TabIndex = 51;
-            this.label73.Text = "N =";
-            // 
-            // label74
-            // 
-            this.label74.AutoSize = true;
-            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label74.Location = new System.Drawing.Point(175, 120);
-            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(25, 13);
-            this.label74.TabIndex = 53;
-            this.label74.Text = "кВт";
-            // 
-            // MkrBox
-            // 
-            this.MkrBox.Location = new System.Drawing.Point(53, 141);
-            this.MkrBox.Margin = new System.Windows.Forms.Padding(2);
-            this.MkrBox.Name = "MkrBox";
-            this.MkrBox.ReadOnly = true;
-            this.MkrBox.Size = new System.Drawing.Size(114, 20);
-            this.MkrBox.TabIndex = 55;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(9, 144);
-            this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(40, 13);
-            this.label75.TabIndex = 54;
-            this.label75.Text = "М кр =";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label76.Location = new System.Drawing.Point(175, 144);
-            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(28, 13);
-            this.label76.TabIndex = 56;
-            this.label76.Text = "H/м";
-            // 
-            // dvBox
-            // 
-            this.dvBox.Location = new System.Drawing.Point(51, 21);
-            this.dvBox.Margin = new System.Windows.Forms.Padding(2);
-            this.dvBox.Name = "dvBox";
-            this.dvBox.ReadOnly = true;
-            this.dvBox.Size = new System.Drawing.Size(114, 20);
-            this.dvBox.TabIndex = 58;
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(16, 24);
-            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(31, 13);
-            this.label77.TabIndex = 57;
-            this.label77.Text = "d в =";
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label70.Location = new System.Drawing.Point(172, 48);
-            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(15, 13);
-            this.label70.TabIndex = 46;
-            this.label70.Text = "м";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label78.Location = new System.Drawing.Point(169, 24);
-            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(15, 13);
-            this.label78.TabIndex = 59;
-            this.label78.Text = "м";
-            // 
-            // label79
-            // 
-            this.label79.AutoSize = true;
-            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label79.Location = new System.Drawing.Point(169, 48);
-            this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(15, 13);
-            this.label79.TabIndex = 62;
-            this.label79.Text = "м";
-            // 
-            // dstBox
-            // 
-            this.dstBox.Location = new System.Drawing.Point(51, 45);
-            this.dstBox.Margin = new System.Windows.Forms.Padding(2);
-            this.dstBox.Name = "dstBox";
-            this.dstBox.ReadOnly = true;
-            this.dstBox.Size = new System.Drawing.Size(114, 20);
-            this.dstBox.TabIndex = 61;
-            // 
-            // label80
-            // 
-            this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(11, 48);
-            this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(36, 13);
-            this.label80.TabIndex = 60;
-            this.label80.Text = "d ст =";
-            // 
-            // label81
-            // 
-            this.label81.AutoSize = true;
-            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label81.Location = new System.Drawing.Point(100, 72);
-            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(15, 13);
-            this.label81.TabIndex = 65;
-            this.label81.Text = "м";
-            // 
-            // D0mBox
-            // 
-            this.D0mBox.Location = new System.Drawing.Point(51, 69);
-            this.D0mBox.Margin = new System.Windows.Forms.Padding(2);
-            this.D0mBox.Name = "D0mBox";
-            this.D0mBox.ReadOnly = true;
-            this.D0mBox.Size = new System.Drawing.Size(45, 20);
-            this.D0mBox.TabIndex = 64;
-            // 
-            // label82
-            // 
-            this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(14, 72);
-            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(33, 13);
-            this.label82.TabIndex = 63;
-            this.label82.Text = "D 0 =";
-            // 
-            // label83
-            // 
-            this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label83.Location = new System.Drawing.Point(169, 72);
-            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(23, 13);
-            this.label83.TabIndex = 67;
-            this.label83.Text = "мм";
-            // 
-            // D0mmBox
-            // 
-            this.D0mmBox.Location = new System.Drawing.Point(120, 69);
-            this.D0mmBox.Margin = new System.Windows.Forms.Padding(2);
-            this.D0mmBox.Name = "D0mmBox";
-            this.D0mmBox.ReadOnly = true;
-            this.D0mmBox.Size = new System.Drawing.Size(45, 20);
-            this.D0mmBox.TabIndex = 66;
-            // 
-            // label84
-            // 
-            this.label84.AutoSize = true;
-            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label84.Location = new System.Drawing.Point(169, 96);
-            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(15, 13);
-            this.label84.TabIndex = 72;
-            this.label84.Text = "м";
-            // 
-            // D1mBox
-            // 
-            this.D1mBox.Location = new System.Drawing.Point(120, 93);
-            this.D1mBox.Margin = new System.Windows.Forms.Padding(2);
-            this.D1mBox.Name = "D1mBox";
-            this.D1mBox.ReadOnly = true;
-            this.D1mBox.Size = new System.Drawing.Size(45, 20);
-            this.D1mBox.TabIndex = 71;
-            // 
-            // label85
-            // 
-            this.label85.AutoSize = true;
-            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label85.Location = new System.Drawing.Point(92, 96);
-            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(23, 13);
-            this.label85.TabIndex = 70;
-            this.label85.Text = "мм";
-            // 
-            // D1mmBox
-            // 
-            this.D1mmBox.Location = new System.Drawing.Point(51, 93);
-            this.D1mmBox.Margin = new System.Windows.Forms.Padding(2);
-            this.D1mmBox.Name = "D1mmBox";
-            this.D1mmBox.ReadOnly = true;
-            this.D1mmBox.Size = new System.Drawing.Size(38, 20);
-            this.D1mmBox.TabIndex = 69;
-            // 
-            // label86
-            // 
-            this.label86.AutoSize = true;
-            this.label86.Location = new System.Drawing.Point(14, 96);
-            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(33, 13);
-            this.label86.TabIndex = 68;
-            this.label86.Text = "D 1 =";
-            // 
-            // label87
-            // 
-            this.label87.AutoSize = true;
-            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label87.Location = new System.Drawing.Point(169, 120);
-            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(15, 13);
-            this.label87.TabIndex = 75;
-            this.label87.Text = "м";
-            // 
-            // lstBox
-            // 
-            this.lstBox.Location = new System.Drawing.Point(51, 117);
-            this.lstBox.Margin = new System.Windows.Forms.Padding(2);
-            this.lstBox.Name = "lstBox";
-            this.lstBox.ReadOnly = true;
-            this.lstBox.Size = new System.Drawing.Size(114, 20);
-            this.lstBox.TabIndex = 74;
-            // 
-            // label88
-            // 
-            this.label88.AutoSize = true;
-            this.label88.Location = new System.Drawing.Point(15, 120);
-            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(32, 13);
-            this.label88.TabIndex = 73;
-            this.label88.Text = "l ст =";
-            // 
-            // label89
-            // 
-            this.label89.AutoSize = true;
-            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label89.Location = new System.Drawing.Point(169, 144);
-            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(26, 13);
-            this.label89.TabIndex = 78;
-            this.label89.Text = "м/с";
-            // 
-            // u1Box
-            // 
-            this.u1Box.Location = new System.Drawing.Point(51, 141);
-            this.u1Box.Margin = new System.Windows.Forms.Padding(2);
-            this.u1Box.Name = "u1Box";
-            this.u1Box.ReadOnly = true;
-            this.u1Box.Size = new System.Drawing.Size(114, 20);
-            this.u1Box.TabIndex = 77;
-            // 
-            // label90
-            // 
-            this.label90.AutoSize = true;
-            this.label90.Location = new System.Drawing.Point(16, 144);
-            this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(31, 13);
-            this.label90.TabIndex = 76;
-            this.label90.Text = "u 1 =";
-            // 
-            // label91
-            // 
-            this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label91.Location = new System.Drawing.Point(169, 168);
-            this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(26, 13);
-            this.label91.TabIndex = 81;
-            this.label91.Text = "м/с";
-            // 
-            // c0Box
-            // 
-            this.c0Box.Location = new System.Drawing.Point(51, 165);
-            this.c0Box.Margin = new System.Windows.Forms.Padding(2);
-            this.c0Box.Name = "c0Box";
-            this.c0Box.ReadOnly = true;
-            this.c0Box.Size = new System.Drawing.Size(114, 20);
-            this.c0Box.TabIndex = 80;
-            // 
-            // label92
-            // 
-            this.label92.AutoSize = true;
-            this.label92.Location = new System.Drawing.Point(16, 168);
-            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(31, 13);
-            this.label92.TabIndex = 79;
-            this.label92.Text = "c 0 =";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label93.Location = new System.Drawing.Point(169, 192);
-            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(11, 13);
-            this.label93.TabIndex = 84;
-            this.label93.Text = "°";
-            // 
-            // B1GradBox
-            // 
-            this.B1GradBox.Location = new System.Drawing.Point(51, 189);
-            this.B1GradBox.Margin = new System.Windows.Forms.Padding(2);
-            this.B1GradBox.Name = "B1GradBox";
-            this.B1GradBox.ReadOnly = true;
-            this.B1GradBox.Size = new System.Drawing.Size(114, 20);
-            this.B1GradBox.TabIndex = 83;
-            // 
-            // label94
-            // 
-            this.label94.AutoSize = true;
-            this.label94.Location = new System.Drawing.Point(18, 192);
-            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(29, 13);
-            this.label94.TabIndex = 82;
-            this.label94.Text = "B1 =";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label95.Location = new System.Drawing.Point(374, 24);
-            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(11, 13);
-            this.label95.TabIndex = 87;
-            this.label95.Text = "°";
-            // 
-            // B1lBox
-            // 
-            this.B1lBox.Location = new System.Drawing.Point(256, 21);
-            this.B1lBox.Margin = new System.Windows.Forms.Padding(2);
-            this.B1lBox.Name = "B1lBox";
-            this.B1lBox.ReadOnly = true;
-            this.B1lBox.Size = new System.Drawing.Size(114, 20);
-            this.B1lBox.TabIndex = 86;
-            // 
-            // label96
-            // 
-            this.label96.AutoSize = true;
-            this.label96.Location = new System.Drawing.Point(214, 24);
-            this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(38, 13);
-            this.label96.TabIndex = 85;
-            this.label96.Text = "B 1л =";
-            // 
-            // label97
-            // 
-            this.label97.AutoSize = true;
-            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label97.Location = new System.Drawing.Point(374, 48);
-            this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(15, 13);
-            this.label97.TabIndex = 90;
-            this.label97.Text = "м";
-            // 
-            // b1Box
-            // 
-            this.b1Box.Location = new System.Drawing.Point(256, 45);
-            this.b1Box.Margin = new System.Windows.Forms.Padding(2);
-            this.b1Box.Name = "b1Box";
-            this.b1Box.ReadOnly = true;
-            this.b1Box.Size = new System.Drawing.Size(114, 20);
-            this.b1Box.TabIndex = 89;
-            // 
-            // label98
-            // 
-            this.label98.AutoSize = true;
-            this.label98.Location = new System.Drawing.Point(221, 48);
-            this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(31, 13);
-            this.label98.TabIndex = 88;
-            this.label98.Text = "b 1 =";
-            // 
-            // label99
-            // 
-            this.label99.AutoSize = true;
-            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label99.Location = new System.Drawing.Point(374, 72);
-            this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(11, 13);
-            this.label99.TabIndex = 93;
-            this.label99.Text = "°";
-            // 
-            // B2lBox
-            // 
-            this.B2lBox.Location = new System.Drawing.Point(256, 69);
-            this.B2lBox.Margin = new System.Windows.Forms.Padding(2);
-            this.B2lBox.Name = "B2lBox";
-            this.B2lBox.ReadOnly = true;
-            this.B2lBox.Size = new System.Drawing.Size(114, 20);
-            this.B2lBox.TabIndex = 92;
-            // 
-            // label100
-            // 
-            this.label100.AutoSize = true;
-            this.label100.Location = new System.Drawing.Point(214, 72);
-            this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(38, 13);
-            this.label100.TabIndex = 91;
-            this.label100.Text = "B 2л =";
-            // 
-            // label101
-            // 
-            this.label101.AutoSize = true;
-            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label101.Location = new System.Drawing.Point(374, 96);
-            this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(26, 13);
-            this.label101.TabIndex = 96;
-            this.label101.Text = "м/с";
-            // 
-            // u2Box
-            // 
-            this.u2Box.Location = new System.Drawing.Point(256, 93);
-            this.u2Box.Margin = new System.Windows.Forms.Padding(2);
-            this.u2Box.Name = "u2Box";
-            this.u2Box.ReadOnly = true;
-            this.u2Box.Size = new System.Drawing.Size(114, 20);
-            this.u2Box.TabIndex = 95;
-            // 
-            // label102
-            // 
-            this.label102.AutoSize = true;
-            this.label102.Location = new System.Drawing.Point(221, 96);
-            this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(31, 13);
-            this.label102.TabIndex = 94;
-            this.label102.Text = "u 2 =";
-            // 
-            // label103
-            // 
-            this.label103.AutoSize = true;
-            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label103.Location = new System.Drawing.Point(374, 120);
-            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(15, 13);
-            this.label103.TabIndex = 99;
-            this.label103.Text = "м";
-            // 
-            // D2Box
-            // 
-            this.D2Box.Location = new System.Drawing.Point(256, 117);
-            this.D2Box.Margin = new System.Windows.Forms.Padding(2);
-            this.D2Box.Name = "D2Box";
-            this.D2Box.ReadOnly = true;
-            this.D2Box.Size = new System.Drawing.Size(114, 20);
-            this.D2Box.TabIndex = 98;
-            // 
-            // label104
-            // 
-            this.label104.AutoSize = true;
-            this.label104.Location = new System.Drawing.Point(219, 120);
-            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(33, 13);
-            this.label104.TabIndex = 97;
-            this.label104.Text = "D 2 =";
-            // 
-            // mBox
-            // 
-            this.mBox.Location = new System.Drawing.Point(256, 141);
-            this.mBox.Margin = new System.Windows.Forms.Padding(2);
-            this.mBox.Name = "mBox";
-            this.mBox.ReadOnly = true;
-            this.mBox.Size = new System.Drawing.Size(114, 20);
-            this.mBox.TabIndex = 101;
-            // 
-            // label106
-            // 
-            this.label106.AutoSize = true;
-            this.label106.Location = new System.Drawing.Point(228, 144);
-            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(24, 13);
-            this.label106.TabIndex = 100;
-            this.label106.Text = "m =";
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label105.Location = new System.Drawing.Point(374, 168);
-            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(15, 13);
-            this.label105.TabIndex = 104;
-            this.label105.Text = "м";
-            // 
-            // b2Box
-            // 
-            this.b2Box.Location = new System.Drawing.Point(256, 165);
-            this.b2Box.Margin = new System.Windows.Forms.Padding(2);
-            this.b2Box.Name = "b2Box";
-            this.b2Box.ReadOnly = true;
-            this.b2Box.Size = new System.Drawing.Size(114, 20);
-            this.b2Box.TabIndex = 103;
-            // 
-            // label107
-            // 
-            this.label107.AutoSize = true;
-            this.label107.Location = new System.Drawing.Point(221, 168);
-            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(31, 13);
-            this.label107.TabIndex = 102;
-            this.label107.Text = "b 2 =";
-            // 
-            // label108
-            // 
-            this.label108.AutoSize = true;
-            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label108.Location = new System.Drawing.Point(374, 192);
-            this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(20, 13);
-            this.label108.TabIndex = 107;
-            this.label108.Text = "шт";
-            // 
-            // zBox
-            // 
-            this.zBox.Location = new System.Drawing.Point(256, 189);
-            this.zBox.Margin = new System.Windows.Forms.Padding(2);
-            this.zBox.Name = "zBox";
-            this.zBox.ReadOnly = true;
-            this.zBox.Size = new System.Drawing.Size(114, 20);
-            this.zBox.TabIndex = 106;
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.Location = new System.Drawing.Point(231, 192);
-            this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(21, 13);
-            this.label109.TabIndex = 105;
-            this.label109.Text = "z =";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.nuVBox);
-            this.groupBox1.Controls.Add(this.MkrBox);
-            this.groupBox1.Controls.Add(this.label75);
-            this.groupBox1.Controls.Add(this.label76);
-            this.groupBox1.Controls.Add(this.N_Box);
-            this.groupBox1.Controls.Add(this.label73);
-            this.groupBox1.Controls.Add(this.label74);
-            this.groupBox1.Controls.Add(this.nuBox);
-            this.groupBox1.Controls.Add(this.label72);
-            this.groupBox1.Controls.Add(this.nuGidrBox);
-            this.groupBox1.Controls.Add(this.label71);
-            this.groupBox1.Controls.Add(this.label70);
-            this.groupBox1.Controls.Add(this.D1nBox);
-            this.groupBox1.Controls.Add(this.label69);
-            this.groupBox1.Controls.Add(this.label68);
-            this.groupBox1.Location = new System.Drawing.Point(12, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(211, 172);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Экономические параметры";
             // 
             // groupBox2
             // 
@@ -2273,11 +1574,805 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Кинематические и геометрические параметры";
             // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label108.Location = new System.Drawing.Point(374, 192);
+            this.label108.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(20, 13);
+            this.label108.TabIndex = 107;
+            this.label108.Text = "шт";
+            // 
+            // dvBox
+            // 
+            this.dvBox.Location = new System.Drawing.Point(51, 21);
+            this.dvBox.Margin = new System.Windows.Forms.Padding(2);
+            this.dvBox.Name = "dvBox";
+            this.dvBox.ReadOnly = true;
+            this.dvBox.Size = new System.Drawing.Size(114, 20);
+            this.dvBox.TabIndex = 58;
+            // 
+            // D0mBox
+            // 
+            this.D0mBox.Location = new System.Drawing.Point(51, 69);
+            this.D0mBox.Margin = new System.Windows.Forms.Padding(2);
+            this.D0mBox.Name = "D0mBox";
+            this.D0mBox.ReadOnly = true;
+            this.D0mBox.Size = new System.Drawing.Size(45, 20);
+            this.D0mBox.TabIndex = 64;
+            // 
+            // zBox
+            // 
+            this.zBox.Location = new System.Drawing.Point(256, 189);
+            this.zBox.Margin = new System.Windows.Forms.Padding(2);
+            this.zBox.Name = "zBox";
+            this.zBox.ReadOnly = true;
+            this.zBox.Size = new System.Drawing.Size(114, 20);
+            this.zBox.TabIndex = 106;
+            // 
+            // label81
+            // 
+            this.label81.AutoSize = true;
+            this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label81.Location = new System.Drawing.Point(100, 72);
+            this.label81.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label81.Name = "label81";
+            this.label81.Size = new System.Drawing.Size(15, 13);
+            this.label81.TabIndex = 65;
+            this.label81.Text = "м";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Location = new System.Drawing.Point(231, 192);
+            this.label109.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(21, 13);
+            this.label109.TabIndex = 105;
+            this.label109.Text = "z =";
+            // 
+            // label82
+            // 
+            this.label82.AutoSize = true;
+            this.label82.Location = new System.Drawing.Point(14, 72);
+            this.label82.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label82.Name = "label82";
+            this.label82.Size = new System.Drawing.Size(33, 13);
+            this.label82.TabIndex = 63;
+            this.label82.Text = "D 0 =";
+            // 
+            // D0mmBox
+            // 
+            this.D0mmBox.Location = new System.Drawing.Point(120, 69);
+            this.D0mmBox.Margin = new System.Windows.Forms.Padding(2);
+            this.D0mmBox.Name = "D0mmBox";
+            this.D0mmBox.ReadOnly = true;
+            this.D0mmBox.Size = new System.Drawing.Size(45, 20);
+            this.D0mmBox.TabIndex = 66;
+            // 
+            // label79
+            // 
+            this.label79.AutoSize = true;
+            this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label79.Location = new System.Drawing.Point(169, 48);
+            this.label79.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(15, 13);
+            this.label79.TabIndex = 62;
+            this.label79.Text = "м";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label105.Location = new System.Drawing.Point(374, 168);
+            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(15, 13);
+            this.label105.TabIndex = 104;
+            this.label105.Text = "м";
+            // 
+            // label83
+            // 
+            this.label83.AutoSize = true;
+            this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label83.Location = new System.Drawing.Point(169, 72);
+            this.label83.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label83.Name = "label83";
+            this.label83.Size = new System.Drawing.Size(23, 13);
+            this.label83.TabIndex = 67;
+            this.label83.Text = "мм";
+            // 
+            // dstBox
+            // 
+            this.dstBox.Location = new System.Drawing.Point(51, 45);
+            this.dstBox.Margin = new System.Windows.Forms.Padding(2);
+            this.dstBox.Name = "dstBox";
+            this.dstBox.ReadOnly = true;
+            this.dstBox.Size = new System.Drawing.Size(114, 20);
+            this.dstBox.TabIndex = 61;
+            // 
+            // b2Box
+            // 
+            this.b2Box.Location = new System.Drawing.Point(256, 165);
+            this.b2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.b2Box.Name = "b2Box";
+            this.b2Box.ReadOnly = true;
+            this.b2Box.Size = new System.Drawing.Size(114, 20);
+            this.b2Box.TabIndex = 103;
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(14, 96);
+            this.label86.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(33, 13);
+            this.label86.TabIndex = 68;
+            this.label86.Text = "D 1 =";
+            // 
+            // label80
+            // 
+            this.label80.AutoSize = true;
+            this.label80.Location = new System.Drawing.Point(11, 48);
+            this.label80.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label80.Name = "label80";
+            this.label80.Size = new System.Drawing.Size(36, 13);
+            this.label80.TabIndex = 60;
+            this.label80.Text = "d ст =";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.Location = new System.Drawing.Point(221, 168);
+            this.label107.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(31, 13);
+            this.label107.TabIndex = 102;
+            this.label107.Text = "b 2 =";
+            // 
+            // D1mmBox
+            // 
+            this.D1mmBox.Location = new System.Drawing.Point(51, 93);
+            this.D1mmBox.Margin = new System.Windows.Forms.Padding(2);
+            this.D1mmBox.Name = "D1mmBox";
+            this.D1mmBox.ReadOnly = true;
+            this.D1mmBox.Size = new System.Drawing.Size(38, 20);
+            this.D1mmBox.TabIndex = 69;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label78.Location = new System.Drawing.Point(169, 24);
+            this.label78.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(15, 13);
+            this.label78.TabIndex = 59;
+            this.label78.Text = "м";
+            // 
+            // mBox
+            // 
+            this.mBox.Location = new System.Drawing.Point(256, 141);
+            this.mBox.Margin = new System.Windows.Forms.Padding(2);
+            this.mBox.Name = "mBox";
+            this.mBox.ReadOnly = true;
+            this.mBox.Size = new System.Drawing.Size(114, 20);
+            this.mBox.TabIndex = 101;
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label85.Location = new System.Drawing.Point(92, 96);
+            this.label85.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(23, 13);
+            this.label85.TabIndex = 70;
+            this.label85.Text = "мм";
+            // 
+            // D1mBox
+            // 
+            this.D1mBox.Location = new System.Drawing.Point(120, 93);
+            this.D1mBox.Margin = new System.Windows.Forms.Padding(2);
+            this.D1mBox.Name = "D1mBox";
+            this.D1mBox.ReadOnly = true;
+            this.D1mBox.Size = new System.Drawing.Size(45, 20);
+            this.D1mBox.TabIndex = 71;
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.Location = new System.Drawing.Point(228, 144);
+            this.label106.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(24, 13);
+            this.label106.TabIndex = 100;
+            this.label106.Text = "m =";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(16, 24);
+            this.label77.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(31, 13);
+            this.label77.TabIndex = 57;
+            this.label77.Text = "d в =";
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label84.Location = new System.Drawing.Point(169, 96);
+            this.label84.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(15, 13);
+            this.label84.TabIndex = 72;
+            this.label84.Text = "м";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label103.Location = new System.Drawing.Point(374, 120);
+            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(15, 13);
+            this.label103.TabIndex = 99;
+            this.label103.Text = "м";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(15, 120);
+            this.label88.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(32, 13);
+            this.label88.TabIndex = 73;
+            this.label88.Text = "l ст =";
+            // 
+            // lstBox
+            // 
+            this.lstBox.Location = new System.Drawing.Point(51, 117);
+            this.lstBox.Margin = new System.Windows.Forms.Padding(2);
+            this.lstBox.Name = "lstBox";
+            this.lstBox.ReadOnly = true;
+            this.lstBox.Size = new System.Drawing.Size(114, 20);
+            this.lstBox.TabIndex = 74;
+            // 
+            // D2Box
+            // 
+            this.D2Box.Location = new System.Drawing.Point(256, 117);
+            this.D2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.D2Box.Name = "D2Box";
+            this.D2Box.ReadOnly = true;
+            this.D2Box.Size = new System.Drawing.Size(114, 20);
+            this.D2Box.TabIndex = 98;
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label87.Location = new System.Drawing.Point(169, 120);
+            this.label87.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(15, 13);
+            this.label87.TabIndex = 75;
+            this.label87.Text = "м";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(16, 144);
+            this.label90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(31, 13);
+            this.label90.TabIndex = 76;
+            this.label90.Text = "u 1 =";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Location = new System.Drawing.Point(219, 120);
+            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(33, 13);
+            this.label104.TabIndex = 97;
+            this.label104.Text = "D 2 =";
+            // 
+            // u1Box
+            // 
+            this.u1Box.Location = new System.Drawing.Point(51, 141);
+            this.u1Box.Margin = new System.Windows.Forms.Padding(2);
+            this.u1Box.Name = "u1Box";
+            this.u1Box.ReadOnly = true;
+            this.u1Box.Size = new System.Drawing.Size(114, 20);
+            this.u1Box.TabIndex = 77;
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label89.Location = new System.Drawing.Point(169, 144);
+            this.label89.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(26, 13);
+            this.label89.TabIndex = 78;
+            this.label89.Text = "м/с";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label101.Location = new System.Drawing.Point(374, 96);
+            this.label101.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(26, 13);
+            this.label101.TabIndex = 96;
+            this.label101.Text = "м/с";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(16, 168);
+            this.label92.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(31, 13);
+            this.label92.TabIndex = 79;
+            this.label92.Text = "c 0 =";
+            // 
+            // c0Box
+            // 
+            this.c0Box.Location = new System.Drawing.Point(51, 165);
+            this.c0Box.Margin = new System.Windows.Forms.Padding(2);
+            this.c0Box.Name = "c0Box";
+            this.c0Box.ReadOnly = true;
+            this.c0Box.Size = new System.Drawing.Size(114, 20);
+            this.c0Box.TabIndex = 80;
+            // 
+            // u2Box
+            // 
+            this.u2Box.Location = new System.Drawing.Point(256, 93);
+            this.u2Box.Margin = new System.Windows.Forms.Padding(2);
+            this.u2Box.Name = "u2Box";
+            this.u2Box.ReadOnly = true;
+            this.u2Box.Size = new System.Drawing.Size(114, 20);
+            this.u2Box.TabIndex = 95;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label91.Location = new System.Drawing.Point(169, 168);
+            this.label91.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(26, 13);
+            this.label91.TabIndex = 81;
+            this.label91.Text = "м/с";
+            // 
+            // B1GradBox
+            // 
+            this.B1GradBox.Location = new System.Drawing.Point(51, 189);
+            this.B1GradBox.Margin = new System.Windows.Forms.Padding(2);
+            this.B1GradBox.Name = "B1GradBox";
+            this.B1GradBox.ReadOnly = true;
+            this.B1GradBox.Size = new System.Drawing.Size(114, 20);
+            this.B1GradBox.TabIndex = 83;
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Location = new System.Drawing.Point(221, 96);
+            this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(31, 13);
+            this.label102.TabIndex = 94;
+            this.label102.Text = "u 2 =";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Location = new System.Drawing.Point(18, 192);
+            this.label94.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(29, 13);
+            this.label94.TabIndex = 82;
+            this.label94.Text = "B1 =";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label93.Location = new System.Drawing.Point(169, 192);
+            this.label93.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(11, 13);
+            this.label93.TabIndex = 84;
+            this.label93.Text = "°";
+            // 
+            // label99
+            // 
+            this.label99.AutoSize = true;
+            this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label99.Location = new System.Drawing.Point(374, 72);
+            this.label99.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(11, 13);
+            this.label99.TabIndex = 93;
+            this.label99.Text = "°";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.Location = new System.Drawing.Point(214, 24);
+            this.label96.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(38, 13);
+            this.label96.TabIndex = 85;
+            this.label96.Text = "B 1л =";
+            // 
+            // B1lBox
+            // 
+            this.B1lBox.Location = new System.Drawing.Point(256, 21);
+            this.B1lBox.Margin = new System.Windows.Forms.Padding(2);
+            this.B1lBox.Name = "B1lBox";
+            this.B1lBox.ReadOnly = true;
+            this.B1lBox.Size = new System.Drawing.Size(114, 20);
+            this.B1lBox.TabIndex = 86;
+            // 
+            // B2lBox
+            // 
+            this.B2lBox.Location = new System.Drawing.Point(256, 69);
+            this.B2lBox.Margin = new System.Windows.Forms.Padding(2);
+            this.B2lBox.Name = "B2lBox";
+            this.B2lBox.ReadOnly = true;
+            this.B2lBox.Size = new System.Drawing.Size(114, 20);
+            this.B2lBox.TabIndex = 92;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label95.Location = new System.Drawing.Point(374, 24);
+            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(11, 13);
+            this.label95.TabIndex = 87;
+            this.label95.Text = "°";
+            // 
+            // b1Box
+            // 
+            this.b1Box.Location = new System.Drawing.Point(256, 45);
+            this.b1Box.Margin = new System.Windows.Forms.Padding(2);
+            this.b1Box.Name = "b1Box";
+            this.b1Box.ReadOnly = true;
+            this.b1Box.Size = new System.Drawing.Size(114, 20);
+            this.b1Box.TabIndex = 89;
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.Location = new System.Drawing.Point(214, 72);
+            this.label100.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(38, 13);
+            this.label100.TabIndex = 91;
+            this.label100.Text = "B 2л =";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(221, 48);
+            this.label98.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(31, 13);
+            this.label98.TabIndex = 88;
+            this.label98.Text = "b 1 =";
+            // 
+            // label97
+            // 
+            this.label97.AutoSize = true;
+            this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label97.Location = new System.Drawing.Point(374, 48);
+            this.label97.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(15, 13);
+            this.label97.TabIndex = 90;
+            this.label97.Text = "м";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.nuVBox);
+            this.groupBox1.Controls.Add(this.MkrBox);
+            this.groupBox1.Controls.Add(this.label75);
+            this.groupBox1.Controls.Add(this.label76);
+            this.groupBox1.Controls.Add(this.N_Box);
+            this.groupBox1.Controls.Add(this.label73);
+            this.groupBox1.Controls.Add(this.label74);
+            this.groupBox1.Controls.Add(this.nuBox);
+            this.groupBox1.Controls.Add(this.label72);
+            this.groupBox1.Controls.Add(this.nuGidrBox);
+            this.groupBox1.Controls.Add(this.label71);
+            this.groupBox1.Controls.Add(this.label70);
+            this.groupBox1.Controls.Add(this.D1nBox);
+            this.groupBox1.Controls.Add(this.label69);
+            this.groupBox1.Controls.Add(this.label68);
+            this.groupBox1.Location = new System.Drawing.Point(12, 5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(211, 172);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Экономические параметры";
+            // 
+            // nuVBox
+            // 
+            this.nuVBox.Location = new System.Drawing.Point(53, 21);
+            this.nuVBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nuVBox.Name = "nuVBox";
+            this.nuVBox.ReadOnly = true;
+            this.nuVBox.Size = new System.Drawing.Size(114, 20);
+            this.nuVBox.TabIndex = 23;
+            // 
+            // MkrBox
+            // 
+            this.MkrBox.Location = new System.Drawing.Point(53, 141);
+            this.MkrBox.Margin = new System.Windows.Forms.Padding(2);
+            this.MkrBox.Name = "MkrBox";
+            this.MkrBox.ReadOnly = true;
+            this.MkrBox.Size = new System.Drawing.Size(114, 20);
+            this.MkrBox.TabIndex = 55;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(9, 144);
+            this.label75.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(40, 13);
+            this.label75.TabIndex = 54;
+            this.label75.Text = "М кр =";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label76.Location = new System.Drawing.Point(175, 144);
+            this.label76.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(28, 13);
+            this.label76.TabIndex = 56;
+            this.label76.Text = "H/м";
+            // 
+            // N_Box
+            // 
+            this.N_Box.Location = new System.Drawing.Point(53, 117);
+            this.N_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.N_Box.Name = "N_Box";
+            this.N_Box.ReadOnly = true;
+            this.N_Box.Size = new System.Drawing.Size(114, 20);
+            this.N_Box.TabIndex = 52;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(25, 120);
+            this.label73.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(24, 13);
+            this.label73.TabIndex = 51;
+            this.label73.Text = "N =";
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label74.Location = new System.Drawing.Point(175, 120);
+            this.label74.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(25, 13);
+            this.label74.TabIndex = 53;
+            this.label74.Text = "кВт";
+            // 
+            // nuBox
+            // 
+            this.nuBox.Location = new System.Drawing.Point(53, 93);
+            this.nuBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nuBox.Name = "nuBox";
+            this.nuBox.ReadOnly = true;
+            this.nuBox.Size = new System.Drawing.Size(114, 20);
+            this.nuBox.TabIndex = 50;
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(21, 96);
+            this.label72.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(28, 13);
+            this.label72.TabIndex = 49;
+            this.label72.Text = "nu =";
+            // 
+            // nuGidrBox
+            // 
+            this.nuGidrBox.Location = new System.Drawing.Point(69, 69);
+            this.nuGidrBox.Margin = new System.Windows.Forms.Padding(2);
+            this.nuGidrBox.Name = "nuGidrBox";
+            this.nuGidrBox.ReadOnly = true;
+            this.nuGidrBox.Size = new System.Drawing.Size(98, 20);
+            this.nuGidrBox.TabIndex = 48;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(11, 72);
+            this.label71.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(54, 13);
+            this.label71.TabIndex = 47;
+            this.label71.Text = "nu гидр =";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label70.Location = new System.Drawing.Point(172, 48);
+            this.label70.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(15, 13);
+            this.label70.TabIndex = 46;
+            this.label70.Text = "м";
+            // 
+            // D1nBox
+            // 
+            this.D1nBox.Location = new System.Drawing.Point(53, 45);
+            this.D1nBox.Margin = new System.Windows.Forms.Padding(2);
+            this.D1nBox.Name = "D1nBox";
+            this.D1nBox.ReadOnly = true;
+            this.D1nBox.Size = new System.Drawing.Size(114, 20);
+            this.D1nBox.TabIndex = 25;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(10, 48);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(39, 13);
+            this.label69.TabIndex = 24;
+            this.label69.Text = "D 1n =";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(11, 24);
+            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(38, 13);
+            this.label68.TabIndex = 22;
+            this.label68.Text = "nu V =";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label60.Location = new System.Drawing.Point(392, 182);
+            this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(15, 13);
+            this.label60.TabIndex = 22;
+            this.label60.Text = "%";
+            // 
+            // KPDBox
+            // 
+            this.KPDBox.Location = new System.Drawing.Point(338, 179);
+            this.KPDBox.Margin = new System.Windows.Forms.Padding(2);
+            this.KPDBox.Name = "KPDBox";
+            this.KPDBox.Size = new System.Drawing.Size(50, 20);
+            this.KPDBox.TabIndex = 21;
+            this.KPDBox.Text = "40";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(272, 183);
+            this.label61.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(62, 13);
+            this.label61.TabIndex = 20;
+            this.label61.Text = "КПД выше";
+            // 
+            // label110
+            // 
+            this.label110.AutoSize = true;
+            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label110.Location = new System.Drawing.Point(162, 212);
+            this.label110.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label110.Name = "label110";
+            this.label110.Size = new System.Drawing.Size(21, 13);
+            this.label110.TabIndex = 25;
+            this.label110.Text = "Па";
+            // 
+            // pNasBox
+            // 
+            this.pNasBox.Location = new System.Drawing.Point(108, 209);
+            this.pNasBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pNasBox.Name = "pNasBox";
+            this.pNasBox.Size = new System.Drawing.Size(50, 20);
+            this.pNasBox.TabIndex = 24;
+            this.pNasBox.Text = "4241,7";
+            // 
+            // label111
+            // 
+            this.label111.AutoSize = true;
+            this.label111.Location = new System.Drawing.Point(9, 212);
+            this.label111.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label111.Name = "label111";
+            this.label111.Size = new System.Drawing.Size(95, 13);
+            this.label111.TabIndex = 23;
+            this.label111.Text = "p нас (пункт 11) =";
+            // 
+            // tab11
+            // 
+            this.tab11.Controls.Add(this.HdopvsBox);
+            this.tab11.Controls.Add(this.label112);
+            this.tab11.Controls.Add(this.label113);
+            this.tab11.Location = new System.Drawing.Point(4, 22);
+            this.tab11.Name = "tab11";
+            this.tab11.Size = new System.Drawing.Size(673, 155);
+            this.tab11.TabIndex = 10;
+            this.tab11.Text = "Пункт 11";
+            this.tab11.UseVisualStyleBackColor = true;
+            // 
+            // HdopvsBox
+            // 
+            this.HdopvsBox.Location = new System.Drawing.Point(81, 5);
+            this.HdopvsBox.Margin = new System.Windows.Forms.Padding(2);
+            this.HdopvsBox.Name = "HdopvsBox";
+            this.HdopvsBox.ReadOnly = true;
+            this.HdopvsBox.Size = new System.Drawing.Size(114, 20);
+            this.HdopvsBox.TabIndex = 50;
+            // 
+            // label112
+            // 
+            this.label112.AutoSize = true;
+            this.label112.Location = new System.Drawing.Point(17, 8);
+            this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label112.Name = "label112";
+            this.label112.Size = new System.Drawing.Size(60, 13);
+            this.label112.TabIndex = 49;
+            this.label112.Text = "Н доп вс =";
+            // 
+            // label113
+            // 
+            this.label113.AutoSize = true;
+            this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label113.Location = new System.Drawing.Point(203, 8);
+            this.label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label113.Name = "label113";
+            this.label113.Size = new System.Drawing.Size(21, 13);
+            this.label113.TabIndex = 51;
+            this.label113.Text = "Па";
+            // 
+            // tab12
+            // 
+            this.tab12.Location = new System.Drawing.Point(4, 22);
+            this.tab12.Name = "tab12";
+            this.tab12.Size = new System.Drawing.Size(673, 155);
+            this.tab12.TabIndex = 11;
+            this.tab12.Text = "Пункт 12";
+            this.tab12.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 511);
+            this.ClientSize = new System.Drawing.Size(730, 511);
+            this.Controls.Add(this.label110);
+            this.Controls.Add(this.pNasBox);
+            this.Controls.Add(this.label111);
             this.Controls.Add(this.label60);
             this.Controls.Add(this.KPDBox);
             this.Controls.Add(this.label61);
@@ -2322,10 +2417,12 @@
             this.tab9.ResumeLayout(false);
             this.tab9.PerformLayout();
             this.tab10.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tab11.ResumeLayout(false);
+            this.tab11.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2518,6 +2615,14 @@
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.TextBox pNasBox;
+        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.TabPage tab11;
+        private System.Windows.Forms.TextBox HdopvsBox;
+        private System.Windows.Forms.Label label112;
+        private System.Windows.Forms.Label label113;
+        private System.Windows.Forms.TabPage tab12;
     }
 }
 
