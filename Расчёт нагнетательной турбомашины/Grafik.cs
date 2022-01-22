@@ -188,6 +188,37 @@ namespace Расчёт_нагнетательной_турбомашины
                     MyPane.AddCurve("H8 под", H8podPairList, Color.Brown, SymbolType.Diamond);
                     addDottedLine(MyPane, Hc_H8pod_linePairList, Color.Black, SymbolType.Circle);
                     break;
+                case 12:
+                    PointPairList P12PointPairList = new PointPairList();
+                    PointPairList P12_HPointPairList = new PointPairList();
+                    PointPairList P12PairList = new PointPairList();
+                    PointPairList P12_PointPairList = new PointPairList();
+                    PointPairList P12_PairList = new PointPairList();
+                    PointPairList DlinePairList = new PointPairList();
+                    double[] P12Point = doubleArrays["P12Point"];
+                    double[] P12_HPoint = doubleArrays["P12_HPoint"];
+                    List<double> ListOfP12 = doubleLists["ListOfP12"];
+                    double[] P12_Point = doubleArrays["P12_Point"];
+                    List<double> ListOfP12_ = doubleLists["ListOfP12_"];
+                    double[] DPoint = doubleArrays["DPoint"];
+                    double[] D_Point = doubleArrays["D_Point"];
+                    P12_HPointPairList.Add(P12Point[0], P12Point[1]);
+                    P12PointPairList.Add(P12_HPoint[0], P12_HPoint[1]);
+                    for (int i = 0; i < 19; i++)
+                        P12PairList.Add(ListOfQ_long[i], ListOfP12[i]);
+                    P12_PointPairList.Add(P12_Point[0], P12_Point[1]);
+                    for (int i = 0; i < ListOfQ_long.Count; i++)
+                        P12_PairList.Add(ListOfQ_long[i], ListOfP12_[i]);
+                    DlinePairList.Add(DPoint[0], DPoint[1]);
+                    DlinePairList.Add(D_Point[0], D_Point[1]);
+
+                    MyPane.AddCurve("", P12PointPairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("", P12_HPointPairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("Случай 1", P12PairList, Color.Brown, SymbolType.Diamond);
+                    MyPane.AddCurve("", P12_PointPairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("Случай 2", P12_PairList, Color.DeepPink, SymbolType.Plus);
+                    addDottedLine(MyPane, DlinePairList, Color.Black, SymbolType.Circle);
+                    break;
             }
 
             MyGraph.AxisChange();
