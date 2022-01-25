@@ -215,18 +215,21 @@
             this.label112 = new System.Windows.Forms.Label();
             this.label113 = new System.Windows.Forms.Label();
             this.tab12 = new System.Windows.Forms.TabPage();
+            this.N12_Box = new System.Windows.Forms.TextBox();
+            this.label116 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.N12Box = new System.Windows.Forms.TextBox();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label115 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.KPDBox = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.pNasBox = new System.Windows.Forms.TextBox();
             this.label111 = new System.Windows.Forms.Label();
-            this.N12Box = new System.Windows.Forms.TextBox();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label115 = new System.Windows.Forms.Label();
-            this.N12_Box = new System.Windows.Forms.TextBox();
-            this.label116 = new System.Windows.Forms.Label();
-            this.label117 = new System.Windows.Forms.Label();
+            this.tab13 = new System.Windows.Forms.TabPage();
+            this.n_n13Box = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tab2.SuspendLayout();
@@ -242,6 +245,7 @@
             this.groupBox1.SuspendLayout();
             this.tab11.SuspendLayout();
             this.tab12.SuspendLayout();
+            this.tab13.SuspendLayout();
             this.SuspendLayout();
             // 
             // variantBox
@@ -488,10 +492,11 @@
             this.tabControl.Controls.Add(this.tab10);
             this.tabControl.Controls.Add(this.tab11);
             this.tabControl.Controls.Add(this.tab12);
+            this.tabControl.Controls.Add(this.tab13);
             this.tabControl.Location = new System.Drawing.Point(9, 234);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(681, 181);
+            this.tabControl.Size = new System.Drawing.Size(781, 181);
             this.tabControl.TabIndex = 19;
             this.tabControl.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tabControl_Selecting);
             // 
@@ -515,7 +520,7 @@
             this.tab1.Location = new System.Drawing.Point(4, 22);
             this.tab1.Name = "tab1";
             this.tab1.Padding = new System.Windows.Forms.Padding(3);
-            this.tab1.Size = new System.Drawing.Size(673, 155);
+            this.tab1.Size = new System.Drawing.Size(773, 155);
             this.tab1.TabIndex = 0;
             this.tab1.Text = "Пункт 1";
             this.tab1.UseVisualStyleBackColor = true;
@@ -646,7 +651,7 @@
             this.tab2.Location = new System.Drawing.Point(4, 22);
             this.tab2.Name = "tab2";
             this.tab2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2.Size = new System.Drawing.Size(673, 155);
+            this.tab2.Size = new System.Drawing.Size(773, 155);
             this.tab2.TabIndex = 1;
             this.tab2.Text = "Пункт 2";
             this.tab2.UseVisualStyleBackColor = true;
@@ -674,7 +679,7 @@
             this.tab3.Location = new System.Drawing.Point(4, 22);
             this.tab3.Name = "tab3";
             this.tab3.Padding = new System.Windows.Forms.Padding(3);
-            this.tab3.Size = new System.Drawing.Size(673, 155);
+            this.tab3.Size = new System.Drawing.Size(773, 155);
             this.tab3.TabIndex = 2;
             this.tab3.Text = "Пункт 3";
             this.tab3.UseVisualStyleBackColor = true;
@@ -879,7 +884,7 @@
             this.tab4.Location = new System.Drawing.Point(4, 22);
             this.tab4.Name = "tab4";
             this.tab4.Padding = new System.Windows.Forms.Padding(3);
-            this.tab4.Size = new System.Drawing.Size(673, 155);
+            this.tab4.Size = new System.Drawing.Size(773, 155);
             this.tab4.TabIndex = 3;
             this.tab4.Text = "Пункт 4";
             this.tab4.UseVisualStyleBackColor = true;
@@ -1057,7 +1062,7 @@
             this.tab5.Location = new System.Drawing.Point(4, 22);
             this.tab5.Name = "tab5";
             this.tab5.Padding = new System.Windows.Forms.Padding(3);
-            this.tab5.Size = new System.Drawing.Size(673, 155);
+            this.tab5.Size = new System.Drawing.Size(773, 155);
             this.tab5.TabIndex = 4;
             this.tab5.Text = "Пункт 5";
             this.tab5.UseVisualStyleBackColor = true;
@@ -1259,7 +1264,7 @@
             this.tab6.Location = new System.Drawing.Point(4, 22);
             this.tab6.Name = "tab6";
             this.tab6.Padding = new System.Windows.Forms.Padding(3);
-            this.tab6.Size = new System.Drawing.Size(673, 155);
+            this.tab6.Size = new System.Drawing.Size(773, 155);
             this.tab6.TabIndex = 5;
             this.tab6.Text = "Пункт 6";
             this.tab6.UseVisualStyleBackColor = true;
@@ -1391,7 +1396,7 @@
             this.tab7.Controls.Add(this.label63);
             this.tab7.Location = new System.Drawing.Point(4, 22);
             this.tab7.Name = "tab7";
-            this.tab7.Size = new System.Drawing.Size(673, 155);
+            this.tab7.Size = new System.Drawing.Size(773, 155);
             this.tab7.TabIndex = 6;
             this.tab7.Text = "Пункт 7";
             this.tab7.UseVisualStyleBackColor = true;
@@ -1433,7 +1438,7 @@
             this.tab8.Controls.Add(this.label65);
             this.tab8.Location = new System.Drawing.Point(4, 22);
             this.tab8.Name = "tab8";
-            this.tab8.Size = new System.Drawing.Size(673, 155);
+            this.tab8.Size = new System.Drawing.Size(773, 155);
             this.tab8.TabIndex = 7;
             this.tab8.Text = "Пункт 8";
             this.tab8.UseVisualStyleBackColor = true;
@@ -1475,7 +1480,7 @@
             this.tab9.Controls.Add(this.label67);
             this.tab9.Location = new System.Drawing.Point(4, 22);
             this.tab9.Name = "tab9";
-            this.tab9.Size = new System.Drawing.Size(673, 155);
+            this.tab9.Size = new System.Drawing.Size(773, 155);
             this.tab9.TabIndex = 8;
             this.tab9.Text = "Пункт 9";
             this.tab9.UseVisualStyleBackColor = true;
@@ -1516,7 +1521,7 @@
             this.tab10.Controls.Add(this.groupBox1);
             this.tab10.Location = new System.Drawing.Point(4, 22);
             this.tab10.Name = "tab10";
-            this.tab10.Size = new System.Drawing.Size(673, 155);
+            this.tab10.Size = new System.Drawing.Size(773, 155);
             this.tab10.TabIndex = 9;
             this.tab10.Text = "Пункт 10";
             this.tab10.UseVisualStyleBackColor = true;
@@ -2268,7 +2273,7 @@
             this.tab11.Controls.Add(this.label113);
             this.tab11.Location = new System.Drawing.Point(4, 22);
             this.tab11.Name = "tab11";
-            this.tab11.Size = new System.Drawing.Size(673, 155);
+            this.tab11.Size = new System.Drawing.Size(773, 155);
             this.tab11.TabIndex = 10;
             this.tab11.Text = "Пункт 11";
             this.tab11.UseVisualStyleBackColor = true;
@@ -2313,10 +2318,70 @@
             this.tab12.Controls.Add(this.label115);
             this.tab12.Location = new System.Drawing.Point(4, 22);
             this.tab12.Name = "tab12";
-            this.tab12.Size = new System.Drawing.Size(673, 155);
+            this.tab12.Size = new System.Drawing.Size(773, 155);
             this.tab12.TabIndex = 11;
             this.tab12.Text = "Пункт 12";
             this.tab12.UseVisualStyleBackColor = true;
+            // 
+            // N12_Box
+            // 
+            this.N12_Box.Location = new System.Drawing.Point(60, 29);
+            this.N12_Box.Margin = new System.Windows.Forms.Padding(2);
+            this.N12_Box.Name = "N12_Box";
+            this.N12_Box.ReadOnly = true;
+            this.N12_Box.Size = new System.Drawing.Size(114, 20);
+            this.N12_Box.TabIndex = 29;
+            // 
+            // label116
+            // 
+            this.label116.AutoSize = true;
+            this.label116.Location = new System.Drawing.Point(17, 32);
+            this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label116.Name = "label116";
+            this.label116.Size = new System.Drawing.Size(41, 13);
+            this.label116.TabIndex = 28;
+            this.label116.Text = "N 12\' =";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label117.Location = new System.Drawing.Point(182, 32);
+            this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(25, 13);
+            this.label117.TabIndex = 30;
+            this.label117.Text = "кВт";
+            // 
+            // N12Box
+            // 
+            this.N12Box.Location = new System.Drawing.Point(60, 5);
+            this.N12Box.Margin = new System.Windows.Forms.Padding(2);
+            this.N12Box.Name = "N12Box";
+            this.N12Box.ReadOnly = true;
+            this.N12Box.Size = new System.Drawing.Size(114, 20);
+            this.N12Box.TabIndex = 26;
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Location = new System.Drawing.Point(17, 8);
+            this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(39, 13);
+            this.label114.TabIndex = 25;
+            this.label114.Text = "N 12 =";
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label115.Location = new System.Drawing.Point(182, 8);
+            this.label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(25, 13);
+            this.label115.TabIndex = 27;
+            this.label115.Text = "кВт";
             // 
             // label60
             // 
@@ -2378,71 +2443,41 @@
             this.label111.TabIndex = 23;
             this.label111.Text = "p нас (пункт 11) =";
             // 
-            // N12Box
+            // tab13
             // 
-            this.N12Box.Location = new System.Drawing.Point(60, 5);
-            this.N12Box.Margin = new System.Windows.Forms.Padding(2);
-            this.N12Box.Name = "N12Box";
-            this.N12Box.ReadOnly = true;
-            this.N12Box.Size = new System.Drawing.Size(114, 20);
-            this.N12Box.TabIndex = 26;
+            this.tab13.Controls.Add(this.n_n13Box);
+            this.tab13.Controls.Add(this.label118);
+            this.tab13.Location = new System.Drawing.Point(4, 22);
+            this.tab13.Name = "tab13";
+            this.tab13.Size = new System.Drawing.Size(773, 155);
+            this.tab13.TabIndex = 12;
+            this.tab13.Text = "Пункт 13";
+            this.tab13.UseVisualStyleBackColor = true;
             // 
-            // label114
+            // n_n13Box
             // 
-            this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(17, 8);
-            this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(39, 13);
-            this.label114.TabIndex = 25;
-            this.label114.Text = "N 12 =";
+            this.n_n13Box.Location = new System.Drawing.Point(92, 5);
+            this.n_n13Box.Margin = new System.Windows.Forms.Padding(2);
+            this.n_n13Box.Name = "n_n13Box";
+            this.n_n13Box.ReadOnly = true;
+            this.n_n13Box.Size = new System.Drawing.Size(114, 20);
+            this.n_n13Box.TabIndex = 29;
             // 
-            // label115
+            // label118
             // 
-            this.label115.AutoSize = true;
-            this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label115.Location = new System.Drawing.Point(182, 8);
-            this.label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(25, 13);
-            this.label115.TabIndex = 27;
-            this.label115.Text = "кВт";
-            // 
-            // N12_Box
-            // 
-            this.N12_Box.Location = new System.Drawing.Point(60, 29);
-            this.N12_Box.Margin = new System.Windows.Forms.Padding(2);
-            this.N12_Box.Name = "N12_Box";
-            this.N12_Box.ReadOnly = true;
-            this.N12_Box.Size = new System.Drawing.Size(114, 20);
-            this.N12_Box.TabIndex = 29;
-            // 
-            // label116
-            // 
-            this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(17, 32);
-            this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(41, 13);
-            this.label116.TabIndex = 28;
-            this.label116.Text = "N 12\' =";
-            // 
-            // label117
-            // 
-            this.label117.AutoSize = true;
-            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label117.Location = new System.Drawing.Point(182, 32);
-            this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(25, 13);
-            this.label117.TabIndex = 30;
-            this.label117.Text = "кВт";
+            this.label118.AutoSize = true;
+            this.label118.Location = new System.Drawing.Point(17, 8);
+            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(71, 13);
+            this.label118.TabIndex = 28;
+            this.label118.Text = "n 13 / n 13\' =";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 511);
+            this.ClientSize = new System.Drawing.Size(829, 511);
             this.Controls.Add(this.label110);
             this.Controls.Add(this.pNasBox);
             this.Controls.Add(this.label111);
@@ -2498,6 +2533,8 @@
             this.tab11.PerformLayout();
             this.tab12.ResumeLayout(false);
             this.tab12.PerformLayout();
+            this.tab13.ResumeLayout(false);
+            this.tab13.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2704,6 +2741,9 @@
         private System.Windows.Forms.TextBox N12_Box;
         private System.Windows.Forms.Label label116;
         private System.Windows.Forms.Label label117;
+        private System.Windows.Forms.TabPage tab13;
+        private System.Windows.Forms.TextBox n_n13Box;
+        private System.Windows.Forms.Label label118;
     }
 }
 

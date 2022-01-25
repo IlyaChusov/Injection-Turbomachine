@@ -40,7 +40,8 @@ namespace Расчёт_нагнетательной_турбомашины
         readonly List<double> ListOfnu = new List<double> 
         { 0, 20, 35, 37.6, 40.25, 42.75, 45, 47, 48.75, 50.25, 51.65, 52.9, 54.1, 55.15, 55.9, 56.2, 55.6, 54,
                 51, 47, 42.25, 36.8, 31, 24.8, 18.85, 12.5, 6.35, 0 };
-        
+
+
         public Form1()
         {
             InitializeComponent();
@@ -50,6 +51,8 @@ namespace Расчёт_нагнетательной_турбомашины
 
             doubleLists["ListOfH"] = ListOfH;
             doubleLists["ListOfnu"] = ListOfnu;
+
+            tabControl.SelectedIndex = 12;
         }
 
         private void culcButton_Click(object sender, EventArgs e)
@@ -539,7 +542,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 false,
                 ListOfHc,
                 null,
-                true);
+                ListOfQ_long);
 
             if (Q12 > P12_Point_list[0][0])
             {
@@ -552,8 +555,8 @@ namespace Расчёт_нагнетательной_турбомашины
                 new List<double>() { Q12_calculating, Q12_calculating },
                 false,
                 ListOfHc,
-                ListOfH,
-                true);
+                null,
+                ListOfQ_long);
                 }
             }
             else
@@ -567,8 +570,8 @@ namespace Расчёт_нагнетательной_турбомашины
                 new List<double>() { Q12_calculating, Q12_calculating },
                 false,
                 ListOfHc,
-                ListOfH,
-                true);
+                null,
+                ListOfQ_long);
                 }
             }
 
@@ -595,19 +598,95 @@ namespace Расчёт_нагнетательной_турбомашины
             double N12_ = Nn12_ / (nu12_ * 0.01);
             N12_Box.Text = N12_.ToString();
             #endregion
+
+            #region Пункт 13
+            List<int> ListOfQ_longer = new List<int>(ListOfQ_long);
+            for (int i = ListOfQ_long.Count; i < ListOfQ_long.Count + 30; i++)
+                ListOfQ_longer.Add(i);
+            intLists["ListOfQ_longer"] = ListOfQ_longer;
+            List<double> ListOfHc_long = new List<double>();
+            foreach (int i in ListOfQ_longer)
+                ListOfHc_long.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2);
+            doubleLists["ListOfHc_long"] = ListOfHc_long;
+
+            double Q13 = Q1 * 1.2;
+            tuple = Tuple.Create(
+                ListOfHc_long[ListOfQ_longer.IndexOf((int)Math.Round(Q13))],
+                ListOfHc_long[ListOfQ_longer.IndexOf((int)Math.Round(Q13) + 1)]);
+            double Q13_calculating = (tuple.Item1 + tuple.Item2) / 2;
+            List<double[]> P13Point_list = getCrossingListsPoint(
+                new List<double>() { tuple.Item1, tuple.Item2 },
+                new List<double>() { Q13_calculating, Q13_calculating },
+                false,
+                ListOfHc_long,
+                null,
+                ListOfQ_longer);
+            if (Q13 > P13Point_list[0][0])
+            {
+                while (Q13 > P13Point_list[0][0])
+                {
+                    Q13 += 0.0001;
+
+                    P13Point_list = getCrossingListsPoint(
+                new List<double>() { tuple.Item1, tuple.Item2 },
+                new List<double>() { Q13_calculating, Q13_calculating },
+                false,
+                ListOfHc_long,
+                null,
+                ListOfQ_longer);
+                }
+            }
+            else
+            {
+                while (Q13 < P13Point_list[0][0])
+                {
+                    Q13_calculating -= 0.0001;
+
+                    P13Point_list = getCrossingListsPoint(
+                new List<double>() { tuple.Item1, tuple.Item2 },
+                new List<double>() { Q13_calculating, Q13_calculating },
+                false,
+                ListOfHc_long,
+                null,
+                ListOfQ_longer);
+                }
+            }
+
+            double[] P13Point = P13Point_list[0];
+            doubleArrays["P13Point"] = P13Point;
+            double H13 = P13Point[1];
+            double H13pod = H13 / Math.Pow(Q13, 2);
+            List<double> ListOfH13pod = new List<double>();
+            foreach (int i in ListOfQ_longer)
+                ListOfH13pod.Add(Math.Pow(i, 2) * H13pod);
+            doubleLists["ListOfH13pod"] = ListOfH13pod;
+
+            List<double[]> P13_HcrossPoint_list = getCrossingListsPoint(
+                ListOfH,
+                ListOfH13pod,
+                true);
+            double Q13_ = P13_HcrossPoint_list[0][0];
+            double H13_ = P13_HcrossPoint_list[0][1];
+            doubleArrays["P13_HPoint"] = new double[] { Q13_, H13_ };
+            double n13 = n * Q13 / Q13_;
+            double n_n13 = n13 / n;
+
+            n_n13Box.Text = n_n13.ToString();
+            #endregion
+
         }
 
         private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList)
         {
-            return getCrossingListsPoint(smallList, list, longList, null, ListOfnu, false);
+            return getCrossingListsPoint(smallList, list, longList, null, ListOfnu, null);
         }
 
         private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList, List<double> crossLinesList, List<double> insteadOfNuList)
         {
-            return getCrossingListsPoint(smallList, list, longList, crossLinesList, insteadOfNuList, false);
+            return getCrossingListsPoint(smallList, list, longList, crossLinesList, insteadOfNuList, null);
         }
 
-        private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList, List<double> crossLinesList, List<double> insteadOfNuList, bool longQlist)
+        private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList, List<double> crossLinesList, List<double> insteadOfNuList, List<int> insteadOfQlist)
         {
             // Расчёт точки пересечения
             int maxIndex = 0, max2Index = 0;
@@ -650,9 +729,8 @@ namespace Расчёт_нагнетательной_турбомашины
                 }
             }
 
-            List<int> insteadOfQlist = ListOfQ;
-            if (longQlist)
-                insteadOfQlist = ListOfQ_long;
+            if (insteadOfQlist == null)
+                insteadOfQlist = ListOfQ;
 
             double y1_H = smallList[maxIndex], y2_H = smallList[max2Index];
             double x1_H = insteadOfQlist[q1Index], x2_H = insteadOfQlist[q2Index];

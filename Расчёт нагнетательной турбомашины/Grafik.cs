@@ -50,7 +50,8 @@ namespace Расчёт_нагнетательной_турбомашины
 
             MyPane.AddCurve("H", HPairList, Color.Blue, SymbolType.Plus);
             MyPane.AddCurve("nu", nPairList, Color.Red, SymbolType.Triangle);
-            MyPane.AddCurve("Hc", HcPairList, Color.Green, SymbolType.Square);
+            if (mode != 13)
+                MyPane.AddCurve("Hc", HcPairList, Color.Green, SymbolType.Square);
 
             switch (mode)
             {
@@ -202,8 +203,8 @@ namespace Расчёт_нагнетательной_турбомашины
                     List<double> ListOfP12_ = doubleLists["ListOfP12_"];
                     double[] DPoint = doubleArrays["DPoint"];
                     double[] D_Point = doubleArrays["D_Point"];
-                    P12_HPointPairList.Add(P12Point[0], P12Point[1]);
                     P12PointPairList.Add(P12_HPoint[0], P12_HPoint[1]);
+                    P12_HPointPairList.Add(P12Point[0], P12Point[1]);
                     for (int i = 0; i < 19; i++)
                         P12PairList.Add(ListOfQ_long[i], ListOfP12[i]);
                     P12_PointPairList.Add(P12_Point[0], P12_Point[1]);
@@ -218,6 +219,28 @@ namespace Расчёт_нагнетательной_турбомашины
                     MyPane.AddCurve("", P12_PointPairList, Color.Black, SymbolType.Circle);
                     MyPane.AddCurve("Случай 2", P12_PairList, Color.DeepPink, SymbolType.Plus);
                     addDottedLine(MyPane, DlinePairList, Color.Black, SymbolType.Circle);
+                    break;
+                case 13:
+                    PointPairList H_longPairList = new PointPairList();
+                    PointPairList P13PointPairList = new PointPairList();
+                    PointPairList H13podPointPairList = new PointPairList();
+                    PointPairList P13_HPointPairList = new PointPairList();
+                    List<int> ListOfQ_longer = intLists["ListOfQ_longer"];
+                    List<double> ListOfHc_long = doubleLists["ListOfHc_long"];
+                    double[] P13Point = doubleArrays["P13Point"];
+                    List<double> ListOfH13pod = doubleLists["ListOfH13pod"];
+                    double[] P13_HPoint = doubleArrays["P13_HPoint"];
+                    for (int i = 0; i < 45; i++)
+                        H_longPairList.Add(ListOfQ_longer[i], ListOfHc_long[i]);
+                    P13PointPairList.Add(P13Point[0], P13Point[1]);
+                    for (int i = 0; i < 45; i++)
+                        H13podPointPairList.Add(ListOfQ_longer[i], ListOfH13pod[i]);
+                    P13_HPointPairList.Add(P13_HPoint[0], P13_HPoint[1]);
+
+                    MyPane.AddCurve("Hc", H_longPairList, Color.Green, SymbolType.Square);
+                    MyPane.AddCurve("", P13PointPairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("H13 под", H13podPointPairList, Color.Brown, SymbolType.Diamond);
+                    MyPane.AddCurve("", P13_HPointPairList, Color.Black, SymbolType.Circle);
                     break;
             }
 
