@@ -242,6 +242,30 @@ namespace Расчёт_нагнетательной_турбомашины
                     MyPane.AddCurve("H13 под", H13podPointPairList, Color.Brown, SymbolType.Diamond);
                     MyPane.AddCurve("", P13_HPointPairList, Color.Black, SymbolType.Circle);
                     break;
+                case 14:
+                    PointPairList H14PairList = new PointPairList();
+                    PointPairList P14PointPairList = new PointPairList();
+                    PointPairList H14podPointPairList = new PointPairList();
+                    PointPairList P14_HPointPairList = new PointPairList();
+                    List<double> ListOfQ14 = doubleLists["ListOfQ14"];
+                    List<double> ListOfH14 = doubleLists["ListOfH14"];
+                    double[] P14Point = doubleArrays["P14Point"];
+                    List<double> ListOfH14pod = doubleLists["ListOfH14pod"];
+                    double[] P14_HPoint = doubleArrays["P14_HPoint"];
+                    double[] P14_nuPoint = doubleArrays["P14_nuPoint"];
+                    for (int i = 0; i < ListOfQ14.Count; i++)
+                        H14PairList.Add(ListOfQ14[i], ListOfH14[i]);
+                    P14PointPairList.Add(P14Point[0], P14Point[1]);
+                    for (int i = 0; i < ListOfQ_long.Count; i++)
+                        H14podPointPairList.Add(ListOfQ_long[i], ListOfH14pod[i]);
+                    P14_HPointPairList.Add(P14_HPoint[0], P14_HPoint[1]);
+                    P14_HPointPairList.Add(P14_HPoint[0], P14_nuPoint[1]);
+
+                    MyPane.AddCurve("H14", H14PairList, Color.DarkBlue, SymbolType.Diamond);
+                    MyPane.AddCurve("", P14PointPairList, Color.Black, SymbolType.Circle);
+                    MyPane.AddCurve("H14 под", H14podPointPairList, Color.DeepPink, SymbolType.Plus);
+                    addDottedLine(MyPane, P14_HPointPairList, Color.Black, SymbolType.Circle);
+                    break;
             }
 
             MyGraph.AxisChange();

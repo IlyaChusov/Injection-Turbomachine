@@ -221,15 +221,31 @@
             this.N12Box = new System.Windows.Forms.TextBox();
             this.label114 = new System.Windows.Forms.Label();
             this.label115 = new System.Windows.Forms.Label();
+            this.tab13 = new System.Windows.Forms.TabPage();
+            this.n_n13Box = new System.Windows.Forms.TextBox();
+            this.label118 = new System.Windows.Forms.Label();
+            this.tab14 = new System.Windows.Forms.TabPage();
             this.label60 = new System.Windows.Forms.Label();
             this.KPDBox = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.label110 = new System.Windows.Forms.Label();
             this.pNasBox = new System.Windows.Forms.TextBox();
             this.label111 = new System.Windows.Forms.Label();
-            this.tab13 = new System.Windows.Forms.TabPage();
-            this.n_n13Box = new System.Windows.Forms.TextBox();
-            this.label118 = new System.Windows.Forms.Label();
+            this.N14Box = new System.Windows.Forms.TextBox();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.Nn14Box = new System.Windows.Forms.TextBox();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.nu14Box = new System.Windows.Forms.TextBox();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label124 = new System.Windows.Forms.Label();
+            this.H14Box = new System.Windows.Forms.TextBox();
+            this.label125 = new System.Windows.Forms.Label();
+            this.label126 = new System.Windows.Forms.Label();
+            this.Q14Box = new System.Windows.Forms.TextBox();
+            this.label127 = new System.Windows.Forms.Label();
+            this.label128 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tab1.SuspendLayout();
             this.tab2.SuspendLayout();
@@ -246,6 +262,7 @@
             this.tab11.SuspendLayout();
             this.tab12.SuspendLayout();
             this.tab13.SuspendLayout();
+            this.tab14.SuspendLayout();
             this.SuspendLayout();
             // 
             // variantBox
@@ -493,6 +510,7 @@
             this.tabControl.Controls.Add(this.tab11);
             this.tabControl.Controls.Add(this.tab12);
             this.tabControl.Controls.Add(this.tab13);
+            this.tabControl.Controls.Add(this.tab14);
             this.tabControl.Location = new System.Drawing.Point(9, 234);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -1445,7 +1463,7 @@
             // 
             // n8_Box
             // 
-            this.n8_Box.Location = new System.Drawing.Point(51, 5);
+            this.n8_Box.Location = new System.Drawing.Point(48, 5);
             this.n8_Box.Margin = new System.Windows.Forms.Padding(2);
             this.n8_Box.Name = "n8_Box";
             this.n8_Box.ReadOnly = true;
@@ -1455,7 +1473,7 @@
             // label64
             // 
             this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(17, 8);
+            this.label64.Location = new System.Drawing.Point(14, 8);
             this.label64.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(30, 13);
@@ -1466,7 +1484,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label65.Location = new System.Drawing.Point(173, 8);
+            this.label65.Location = new System.Drawing.Point(170, 8);
             this.label65.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(44, 13);
@@ -1487,7 +1505,7 @@
             // 
             // nsBox
             // 
-            this.nsBox.Location = new System.Drawing.Point(51, 5);
+            this.nsBox.Location = new System.Drawing.Point(48, 5);
             this.nsBox.Margin = new System.Windows.Forms.Padding(2);
             this.nsBox.Name = "nsBox";
             this.nsBox.ReadOnly = true;
@@ -1497,7 +1515,7 @@
             // label66
             // 
             this.label66.AutoSize = true;
-            this.label66.Location = new System.Drawing.Point(17, 8);
+            this.label66.Location = new System.Drawing.Point(14, 8);
             this.label66.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(30, 13);
@@ -1508,7 +1526,7 @@
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label67.Location = new System.Drawing.Point(173, 8);
+            this.label67.Location = new System.Drawing.Point(170, 8);
             this.label67.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(44, 13);
@@ -2280,7 +2298,7 @@
             // 
             // HdopvsBox
             // 
-            this.HdopvsBox.Location = new System.Drawing.Point(81, 5);
+            this.HdopvsBox.Location = new System.Drawing.Point(78, 5);
             this.HdopvsBox.Margin = new System.Windows.Forms.Padding(2);
             this.HdopvsBox.Name = "HdopvsBox";
             this.HdopvsBox.ReadOnly = true;
@@ -2290,7 +2308,7 @@
             // label112
             // 
             this.label112.AutoSize = true;
-            this.label112.Location = new System.Drawing.Point(17, 8);
+            this.label112.Location = new System.Drawing.Point(14, 8);
             this.label112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label112.Name = "label112";
             this.label112.Size = new System.Drawing.Size(60, 13);
@@ -2301,7 +2319,7 @@
             // 
             this.label113.AutoSize = true;
             this.label113.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label113.Location = new System.Drawing.Point(203, 8);
+            this.label113.Location = new System.Drawing.Point(200, 8);
             this.label113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label113.Name = "label113";
             this.label113.Size = new System.Drawing.Size(21, 13);
@@ -2325,7 +2343,7 @@
             // 
             // N12_Box
             // 
-            this.N12_Box.Location = new System.Drawing.Point(60, 29);
+            this.N12_Box.Location = new System.Drawing.Point(57, 29);
             this.N12_Box.Margin = new System.Windows.Forms.Padding(2);
             this.N12_Box.Name = "N12_Box";
             this.N12_Box.ReadOnly = true;
@@ -2335,7 +2353,7 @@
             // label116
             // 
             this.label116.AutoSize = true;
-            this.label116.Location = new System.Drawing.Point(17, 32);
+            this.label116.Location = new System.Drawing.Point(14, 32);
             this.label116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(41, 13);
@@ -2346,7 +2364,7 @@
             // 
             this.label117.AutoSize = true;
             this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label117.Location = new System.Drawing.Point(182, 32);
+            this.label117.Location = new System.Drawing.Point(179, 32);
             this.label117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label117.Name = "label117";
             this.label117.Size = new System.Drawing.Size(25, 13);
@@ -2355,7 +2373,7 @@
             // 
             // N12Box
             // 
-            this.N12Box.Location = new System.Drawing.Point(60, 5);
+            this.N12Box.Location = new System.Drawing.Point(57, 5);
             this.N12Box.Margin = new System.Windows.Forms.Padding(2);
             this.N12Box.Name = "N12Box";
             this.N12Box.ReadOnly = true;
@@ -2365,7 +2383,7 @@
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Location = new System.Drawing.Point(17, 8);
+            this.label114.Location = new System.Drawing.Point(14, 8);
             this.label114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(39, 13);
@@ -2376,12 +2394,66 @@
             // 
             this.label115.AutoSize = true;
             this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label115.Location = new System.Drawing.Point(182, 8);
+            this.label115.Location = new System.Drawing.Point(179, 8);
             this.label115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label115.Name = "label115";
             this.label115.Size = new System.Drawing.Size(25, 13);
             this.label115.TabIndex = 27;
             this.label115.Text = "кВт";
+            // 
+            // tab13
+            // 
+            this.tab13.Controls.Add(this.n_n13Box);
+            this.tab13.Controls.Add(this.label118);
+            this.tab13.Location = new System.Drawing.Point(4, 22);
+            this.tab13.Name = "tab13";
+            this.tab13.Size = new System.Drawing.Size(773, 155);
+            this.tab13.TabIndex = 12;
+            this.tab13.Text = "Пункт 13";
+            this.tab13.UseVisualStyleBackColor = true;
+            // 
+            // n_n13Box
+            // 
+            this.n_n13Box.Location = new System.Drawing.Point(89, 5);
+            this.n_n13Box.Margin = new System.Windows.Forms.Padding(2);
+            this.n_n13Box.Name = "n_n13Box";
+            this.n_n13Box.ReadOnly = true;
+            this.n_n13Box.Size = new System.Drawing.Size(114, 20);
+            this.n_n13Box.TabIndex = 29;
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Location = new System.Drawing.Point(14, 8);
+            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(71, 13);
+            this.label118.TabIndex = 28;
+            this.label118.Text = "n 13 / n 13\' =";
+            // 
+            // tab14
+            // 
+            this.tab14.Controls.Add(this.N14Box);
+            this.tab14.Controls.Add(this.label119);
+            this.tab14.Controls.Add(this.label120);
+            this.tab14.Controls.Add(this.Nn14Box);
+            this.tab14.Controls.Add(this.label121);
+            this.tab14.Controls.Add(this.label122);
+            this.tab14.Controls.Add(this.nu14Box);
+            this.tab14.Controls.Add(this.label123);
+            this.tab14.Controls.Add(this.label124);
+            this.tab14.Controls.Add(this.H14Box);
+            this.tab14.Controls.Add(this.label125);
+            this.tab14.Controls.Add(this.label126);
+            this.tab14.Controls.Add(this.Q14Box);
+            this.tab14.Controls.Add(this.label127);
+            this.tab14.Controls.Add(this.label128);
+            this.tab14.Location = new System.Drawing.Point(4, 22);
+            this.tab14.Name = "tab14";
+            this.tab14.Size = new System.Drawing.Size(773, 155);
+            this.tab14.TabIndex = 13;
+            this.tab14.Text = "Пункт 14";
+            this.tab14.UseVisualStyleBackColor = true;
             // 
             // label60
             // 
@@ -2443,35 +2515,155 @@
             this.label111.TabIndex = 23;
             this.label111.Text = "p нас (пункт 11) =";
             // 
-            // tab13
+            // N14Box
             // 
-            this.tab13.Controls.Add(this.n_n13Box);
-            this.tab13.Controls.Add(this.label118);
-            this.tab13.Location = new System.Drawing.Point(4, 22);
-            this.tab13.Name = "tab13";
-            this.tab13.Size = new System.Drawing.Size(773, 155);
-            this.tab13.TabIndex = 12;
-            this.tab13.Text = "Пункт 13";
-            this.tab13.UseVisualStyleBackColor = true;
+            this.N14Box.Location = new System.Drawing.Point(57, 101);
+            this.N14Box.Margin = new System.Windows.Forms.Padding(2);
+            this.N14Box.Name = "N14Box";
+            this.N14Box.ReadOnly = true;
+            this.N14Box.Size = new System.Drawing.Size(114, 20);
+            this.N14Box.TabIndex = 41;
             // 
-            // n_n13Box
+            // label119
             // 
-            this.n_n13Box.Location = new System.Drawing.Point(92, 5);
-            this.n_n13Box.Margin = new System.Windows.Forms.Padding(2);
-            this.n_n13Box.Name = "n_n13Box";
-            this.n_n13Box.ReadOnly = true;
-            this.n_n13Box.Size = new System.Drawing.Size(114, 20);
-            this.n_n13Box.TabIndex = 29;
+            this.label119.AutoSize = true;
+            this.label119.Location = new System.Drawing.Point(17, 104);
+            this.label119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(36, 13);
+            this.label119.TabIndex = 40;
+            this.label119.Text = "N14 =";
             // 
-            // label118
+            // label120
             // 
-            this.label118.AutoSize = true;
-            this.label118.Location = new System.Drawing.Point(17, 8);
-            this.label118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(71, 13);
-            this.label118.TabIndex = 28;
-            this.label118.Text = "n 13 / n 13\' =";
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label120.Location = new System.Drawing.Point(179, 104);
+            this.label120.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(25, 13);
+            this.label120.TabIndex = 42;
+            this.label120.Text = "кВт";
+            // 
+            // Nn14Box
+            // 
+            this.Nn14Box.Location = new System.Drawing.Point(57, 77);
+            this.Nn14Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Nn14Box.Name = "Nn14Box";
+            this.Nn14Box.ReadOnly = true;
+            this.Nn14Box.Size = new System.Drawing.Size(114, 20);
+            this.Nn14Box.TabIndex = 38;
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Location = new System.Drawing.Point(8, 80);
+            this.label121.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(45, 13);
+            this.label121.TabIndex = 37;
+            this.label121.Text = "N n14 =";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label122.Location = new System.Drawing.Point(179, 80);
+            this.label122.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(25, 13);
+            this.label122.TabIndex = 39;
+            this.label122.Text = "кВт";
+            // 
+            // nu14Box
+            // 
+            this.nu14Box.Location = new System.Drawing.Point(57, 53);
+            this.nu14Box.Margin = new System.Windows.Forms.Padding(2);
+            this.nu14Box.Name = "nu14Box";
+            this.nu14Box.ReadOnly = true;
+            this.nu14Box.Size = new System.Drawing.Size(114, 20);
+            this.nu14Box.TabIndex = 35;
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Location = new System.Drawing.Point(10, 56);
+            this.label123.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(43, 13);
+            this.label123.TabIndex = 34;
+            this.label123.Text = "nu 14 =";
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label124.Location = new System.Drawing.Point(179, 56);
+            this.label124.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(15, 13);
+            this.label124.TabIndex = 36;
+            this.label124.Text = "%";
+            // 
+            // H14Box
+            // 
+            this.H14Box.Location = new System.Drawing.Point(57, 29);
+            this.H14Box.Margin = new System.Windows.Forms.Padding(2);
+            this.H14Box.Name = "H14Box";
+            this.H14Box.ReadOnly = true;
+            this.H14Box.Size = new System.Drawing.Size(114, 20);
+            this.H14Box.TabIndex = 32;
+            // 
+            // label125
+            // 
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(14, 32);
+            this.label125.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(39, 13);
+            this.label125.TabIndex = 31;
+            this.label125.Text = "H 14 =";
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label126.Location = new System.Drawing.Point(179, 32);
+            this.label126.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(15, 13);
+            this.label126.TabIndex = 33;
+            this.label126.Text = "м";
+            // 
+            // Q14Box
+            // 
+            this.Q14Box.Location = new System.Drawing.Point(57, 5);
+            this.Q14Box.Margin = new System.Windows.Forms.Padding(2);
+            this.Q14Box.Name = "Q14Box";
+            this.Q14Box.ReadOnly = true;
+            this.Q14Box.Size = new System.Drawing.Size(114, 20);
+            this.Q14Box.TabIndex = 29;
+            // 
+            // label127
+            // 
+            this.label127.AutoSize = true;
+            this.label127.Location = new System.Drawing.Point(14, 8);
+            this.label127.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label127.Name = "label127";
+            this.label127.Size = new System.Drawing.Size(39, 13);
+            this.label127.TabIndex = 28;
+            this.label127.Text = "Q 14 =";
+            // 
+            // label128
+            // 
+            this.label128.AutoSize = true;
+            this.label128.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label128.Location = new System.Drawing.Point(179, 8);
+            this.label128.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label128.Name = "label128";
+            this.label128.Size = new System.Drawing.Size(24, 13);
+            this.label128.TabIndex = 30;
+            this.label128.Text = "л/с";
             // 
             // Form1
             // 
@@ -2535,6 +2727,8 @@
             this.tab12.PerformLayout();
             this.tab13.ResumeLayout(false);
             this.tab13.PerformLayout();
+            this.tab14.ResumeLayout(false);
+            this.tab14.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2744,6 +2938,22 @@
         private System.Windows.Forms.TabPage tab13;
         private System.Windows.Forms.TextBox n_n13Box;
         private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.TabPage tab14;
+        private System.Windows.Forms.TextBox N14Box;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.TextBox Nn14Box;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.TextBox nu14Box;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.TextBox H14Box;
+        private System.Windows.Forms.Label label125;
+        private System.Windows.Forms.Label label126;
+        private System.Windows.Forms.TextBox Q14Box;
+        private System.Windows.Forms.Label label127;
+        private System.Windows.Forms.Label label128;
     }
 }
 
