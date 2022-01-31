@@ -50,7 +50,7 @@ namespace Расчёт_нагнетательной_турбомашины
 
             MyPane.AddCurve("H", HPairList, Color.Blue, SymbolType.Plus);
             MyPane.AddCurve("nu", nPairList, Color.Red, SymbolType.Triangle);
-            if (mode != 13)
+            if (mode != 13 && mode != 15)
                 MyPane.AddCurve("Hc", HcPairList, Color.Green, SymbolType.Square);
 
             switch (mode)
@@ -59,7 +59,6 @@ namespace Расчёт_нагнетательной_турбомашины
                     PointPairList H_Hc_linePairList = new PointPairList();
                     double[] H_Hc_crossPoint = doubleArrays["H_Hc_crossPoint"];
                     double[] H_Hc_nu_point = doubleArrays["H_Hc_nu_point"];
-
                     H_Hc_linePairList.Add(H_Hc_crossPoint[0], H_Hc_crossPoint[1]);
                     H_Hc_linePairList.Add(H_Hc_nu_point[0], H_Hc_nu_point[1]);
 
@@ -265,6 +264,25 @@ namespace Расчёт_нагнетательной_турбомашины
                     MyPane.AddCurve("", P14PointPairList, Color.Black, SymbolType.Circle);
                     MyPane.AddCurve("H14 под", H14podPointPairList, Color.DeepPink, SymbolType.Plus);
                     addDottedLine(MyPane, P14_HPointPairList, Color.Black, SymbolType.Circle);
+                    break;
+                case 15:
+                    PointPairList H_longerPairList = new PointPairList();
+                    PointPairList Hc_longerPairList = new PointPairList();
+                    PointPairList H_parPointPairList = new PointPairList();
+                    List<int> ListOfQ_longest = intLists["ListOfQ_longest"];
+                    List<double> ListOfHc_longer = doubleLists["ListOfHc_longer"];
+                    double[] H_parPoint = doubleArrays["H_parPoint"];
+                    for (int i = 0; i < ListOfQ_longest.Count; i++)
+                        H_longerPairList.Add(ListOfQ_longest[i], ListOfH[i]);
+                    for (int i = 0; i < ListOfHc_longer.Count; i++)
+                        Hc_longerPairList.Add(i, ListOfHc_longer[i]);
+                    H_parPointPairList.Add(0, H_parPoint[1]);
+                    H_parPointPairList.Add(H_parPoint[0], H_parPoint[1]);
+                    H_parPointPairList.Add(H_parPoint[0], 0);
+
+                    MyPane.AddCurve("H пар", H_longerPairList, Color.DarkBlue, SymbolType.Diamond);
+                    MyPane.AddCurve("Hc", Hc_longerPairList, Color.Green, SymbolType.Square);
+                    addDottedLine(MyPane, H_parPointPairList, Color.Black, SymbolType.Circle);
                     break;
             }
 

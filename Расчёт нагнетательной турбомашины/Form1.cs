@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
-using System.Configuration;
 using System.Data.SQLite;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Расчёт_нагнетательной_турбомашины
 {
@@ -52,7 +45,7 @@ namespace Расчёт_нагнетательной_турбомашины
             doubleLists["ListOfH"] = ListOfH;
             doubleLists["ListOfnu"] = ListOfnu;
 
-            tabControl.SelectedIndex = 13;
+            tabControl.SelectedIndex = 14;
         }
 
         private void culcButton_Click(object sender, EventArgs e)
@@ -722,6 +715,42 @@ namespace Расчёт_нагнетательной_турбомашины
             Nn14Box.Text = Nn14.ToString();
             N14Box.Text = N14.ToString();
             #endregion
+
+            #region Пункт 15
+            List<int> ListOfQ_longest = new List<int>();
+            foreach (int i in ListOfQ)
+                ListOfQ_longest.Add(i * 2);
+            intLists["ListOfQ_longest"] = ListOfQ_longest;
+            List<double> ListOfHc_longer = new List<double>();
+            List<int> ListOfQ_longest_full = new List<int>();
+            for (int i = 0; i < ListOfQ_longest.Max() + 1; i++)
+            {
+                ListOfHc_longer.Add(H_c1 + Math.Pow(i * Math.Pow(10, -3), 2) * H_c2);
+                ListOfQ_longest_full.Add(i);
+            }
+            doubleLists["ListOfHc_longer"] = ListOfHc_longer;
+                
+
+            List<double[]> H_parPoint_list = getCrossingListsPoint(
+                ListOfH,
+                ListOfHc_longer,
+                true,
+                null,
+                null,
+                ListOfQ_longest_full,
+                null,
+                ListOfQ_longest);
+
+            double[] H_parPoint = H_parPoint_list[0];
+            doubleArrays["H_parPoint"] = H_parPoint;
+            double Q15par = H_parPoint[0];
+            double Q15otd = Q15par / 2;
+            double H15par = H_parPoint[1];
+
+            Q15parBox.Text = Q15par.ToString();
+            Q15otdBox.Text = Q15otd.ToString();
+            H15parBox.Text = H15par.ToString();
+            #endregion
         }
 
         private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList)
@@ -741,32 +770,52 @@ namespace Расчёт_нагнетательной_турбомашины
 
         private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList, List<double> crossLinesList, List<double> insteadOfNuList, List<int> insteadOfQList, List<double> insteadOfQListDouble)
         {
+            return getCrossingListsPoint(smallList, list, longList, crossLinesList, insteadOfNuList, insteadOfQList, insteadOfQListDouble, null);
+        }
+
+        private List<double[]> getCrossingListsPoint(List<double> smallList, List<double> list, bool longList, List<double> crossLinesList, List<double> insteadOfNuList, List<int> insteadOfQList, List<double> insteadOfQListDouble, List<int> insteadOfQFor15Case)
+        {
             // Расчёт точки пересечения
             int maxIndex = 0, max2Index = 0;
-            double max = smallList.Max(), max2 = smallList.Max();
             int longInt = 0;
             if (longList)
                 longInt = 8;
             if (insteadOfQListDouble != null)
                 longInt = 7;
+            if (insteadOfQFor15Case != null)
+                longInt = 18;
             int j = 0;
             if (longList)
                 j = 2;
 
+            bool positive = true;
+            if (smallList[0] - list[longInt] < 0)
+                positive = false;
+
             for (int i = j; i < smallList.Count; i++)
             {
-                double temp = Math.Abs(smallList[i] - list[i + longInt]);
-                if (temp < max)
+                double temp = smallList[i] - list[i + longInt];
+                if (insteadOfQFor15Case != null)
+                    temp = smallList[i] - list[(i - 1) * 2 + longInt];
+
+                if (positive)
                 {
-                    max = temp;
-                    maxIndex = i;
+                    if (temp > 0)
+                        maxIndex = i;
+                    else
+                    {
+                        max2Index = i;
+                        break;
+                    }
                 }
                 else
                 {
-                    if ((temp < max2) && (Math.Abs(maxIndex - i) == 1))
+                    if (temp < 0)
+                        maxIndex = i;
+                    else
                     {
-                        max2 = temp;
                         max2Index = i;
+                        break;
                     }
                 }
             }
@@ -787,16 +836,28 @@ namespace Расчёт_нагнетательной_турбомашины
             if (insteadOfQList == null)
                 insteadOfQList = ListOfQ;
 
-            int for14Case = 0;
+            int forCase14 = 0;
             if (insteadOfQListDouble == null)
             {
                 insteadOfQListDouble = new List<double>();
-                foreach (int i in insteadOfQList)
+                List<int> temp;
+                if (insteadOfQFor15Case == null)
+                    temp = insteadOfQList;
+                else
+                    temp = insteadOfQFor15Case;
+                foreach (int i in temp)
                     insteadOfQListDouble.Add(i);
             }
             else
-                for14Case = -1;
+                forCase14 = -1;
 
+            int forCase15X = 0;
+            int forCase15Y = 0;
+            if (insteadOfQFor15Case != null)
+            {
+                forCase15Y = maxIndex - 1;
+                forCase15X = forCase15Y + longInt;
+            }
 
             double y1_H = smallList[maxIndex], y2_H = smallList[max2Index];
             double x1_H = insteadOfQListDouble[q1Index], x2_H = insteadOfQListDouble[q2Index];
@@ -804,8 +865,8 @@ namespace Расчёт_нагнетательной_турбомашины
             double y_H = x2_H - x1_H;
             double C_H = -(x1_H * y2_H - x2_H * y1_H);
 
-            double y1_Hc = list[maxIndex + longInt], y2_Hc = list[max2Index + longInt];
-            double x1_Hc = insteadOfQList[q1Index + for14Case], x2_Hc = insteadOfQList[q2Index + for14Case];
+            double y1_Hc = list[maxIndex + longInt + forCase15Y], y2_Hc = list[max2Index + longInt + forCase15Y];
+            double x1_Hc = insteadOfQList[q1Index + forCase14 + forCase15X], x2_Hc = insteadOfQList[q2Index + forCase14 + forCase15X];
             double x_Hc = y1_Hc - y2_Hc;
             double y_Hc = x2_Hc - x1_Hc;
             double C_Hc = -(x1_Hc * y2_Hc - x2_Hc * y1_Hc);
@@ -836,7 +897,7 @@ namespace Расчёт_нагнетательной_турбомашины
                 double C_p = -(x1_p * y2_p - x2_p * y1_p);
 
                 double y1_n = insteadOfNuList[nu1Index], y2_n = insteadOfNuList[nu2Index];
-                double x1_n = insteadOfQList[q1Index + for14Case], x2_n = insteadOfQList[q2Index + for14Case];
+                double x1_n = insteadOfQList[q1Index + forCase14], x2_n = insteadOfQList[q2Index + forCase14];
                 double x_n = y1_n - y2_n;
                 double y_n = x2_n - x1_n;
                 double C_n = -(x1_n * y2_n - x2_n * y1_n);
